@@ -3,72 +3,72 @@
 }
 
 .button-login {
-  border: 2px solid #53DEB2;
-  color: #53DEB2;
+  border: 2px solid $green-md;
+  color: $green-md;
 
   &:hover {
-  background-color: #53DEB2;
+  background-color: $green-md;
   color: white;
  }
 }
 
 .button-recover-password {
-  border: 2px solid #81E2F5;
-  color: #81E2F5;
+  border: 2px solid $blue-light;
+  color: $blue-light;
   margin: 10px;
 
 &:hover{
-  background-color: #81E2F5;
+  background-color: $blue-light;
   color: white;
  }
 }
 
 .button-signup{
-  border: 2px solid #327DE0;
-  color: #327DE0;
+  border: 2px solid $blue-md;
+  color: $blue-md;
 
 &:hover{
-  background-color: #327DE0;
+  background-color: $blue-md;
   color: white;
  }
 }
 
 .button-back{
-  border: 2px solid #BAF9B8;
-  color: #BAF9B8;
+  border: 2px solid $green-light;
+  color: $green-light;
 
 &:hover{
-  background-color: #BAF9B8;
+  background-color: $green-light;
   color: white;
  }
 }
 
 .button-submit{
-  border: 2px solid #FA6140;
-  color: #FA6140;
+  border: 2px solid $orange-md;
+  color: $orange-md;
 
 &:hover{
-  background-color: #FA6140;
+  background-color: $orange-md;
   color: white;
 }
 }
 
 .button-delete-account{
-  border: 2px solid #FA6140;
-  color: #FA6140;
+  border: 2px solid $orange-md;
+  color: $orange-md;
 
 &:hover{
-  background-color: #FA6140;
+  background-color: $orange-md;
   color: white;
  }
 }
 
 .button-save-updates{
-  border: 2px solid #FA6140;
-  color: #FA6140;
+  border: 2px solid $orange-md;
+  color: $orange-md;
 
 &:hover{
-  background-color: #FA6140;
+  background-color: $orange-md;
   color: white;
  }
 }
