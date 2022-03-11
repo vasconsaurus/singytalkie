@@ -1,0 +1,74 @@
+.button {
+  border-radius: 30px;
+}
+
+.button-login {
+  border: 2px solid $green-md;
+  color: $green-md;
+
+  &:hover {
+  background-color: $green-md;
+  color: white;
+ }
+}
+
+.button-recover-password {
+  border: 2px solid $blue-light;
+  color: $blue-light;
+  margin: 10px;
+
+&:hover{
+  background-color: $blue-light;
+  color: white;
+ }
+}
+
+.button-signup{
+  border: 2px solid $blue-md;
+  color: $blue-md;
+
+&:hover{
+  background-color: $blue-md;
+  color: white;
+ }
+}
+
+.button-back{
+  border: 2px solid $green-light;
+  color: $green-light;
+
+&:hover{
+  background-color: $green-light;
+  color: white;
+ }
+}
+
+.button-submit{
+  border: 2px solid $orange-md;
+  color: $orange-md;
+
+&:hover{
+  background-color: $orange-md;
+  color: white;
+}
+}
+
+.button-delete-account{
+  border: 2px solid $orange-md;
+  color: $orange-md;
+
+&:hover{
+  background-color: $orange-md;
+  color: white;
+ }
+}
+
+.button-save-updates{
+  border: 2px solid $orange-md;
+  color: $orange-md;
+
+&:hover{
+  background-color: $orange-md;
+  color: white;
+ }
+}
