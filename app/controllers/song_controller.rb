@@ -1,9 +1,20 @@
 class SongController < ApplicationController
-  def index
+  before_action :set_song, only: [:show]
 
+  def index
+    @songs = Song.all
   end
 
   def show
-    @song = Song.find(params[:song_id])
+  end
+
+  private
+
+  def set_song
+    @song = Song.find(params[:id])
+  end
+
+  def vehicle_params
+    params.require(:song).permit(:title, :lyrics, :song_link, :artist, :genre, :translation)
   end
 end
