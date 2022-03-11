@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <div class="card my-5">
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-12">
+      <h2 class="mb-3"><%= @song.name %></h2>
+      <hr>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-12 col-md-6">
+     <div class="card border-secondary mb-3">
+        <div class="card-header bg-transparent border-secondary pt-3">
+          <h5 class = card-title>Details</h5>
+        </div>
+        <div class="card-body bg-transparent bg-opacity-50">
+          <p class="mb-1"><strong>title:</strong> <%= @song.title %></p>
+          <p class="mb-1"><strong>lyrics:</strong> <%= @song.lyrics %></p>
+          <p class="mb-1"><strong>song_link: </strong><%= @song.song_link %></p>
+          <p class="mb-1"><strong>artist:</strong> <%= (@song.artist) %></p>
+          <p class="mb-1"><strong>genre:</strong> <%= (@song.genre) %></p>
+          <p class="mb-1"><strong>translation:</strong> <%= (@song.translation) %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <%= simple_form_for([@song, @order]) do |f| %>
+      <%= f.input :song_id, as: :hidden, value: @song.id %>
+      <%= f.input :user_id, as: :hidden, value: current_user&.id %>
+      <%= f.button :submit, 'Buy it Now!', class: "btn btn-dark align-self-end" %>
+    <% end %>
+  <% end %>
+
+  <%= link_to 'Back', root_path, class: "btn btn-dark align-self-end" %>
+</div>
