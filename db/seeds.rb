@@ -6,7 +6,7 @@ puts "Database cleaned!"
 
 
 
-lyrics01 = Song.create(song_link: "https://www.youtube.com/watch?v=sXYIxJScSik",
+lyrics01 = Song.create(song_link: "https://www.youtube.com/embed/sXYIxJScSik",
                       lyrics: "There is a house in Sin City
                       They call the Rising Sun
                       And it's been the ruin of many a poor boy
@@ -73,7 +73,7 @@ lyrics01 = Song.create(song_link: "https://www.youtube.com/watch?v=sXYIxJScSik",
                       E tem sido a ruína de muitos garotos pobres
                       E Deus sabe que eu sou um deles")
 
-lyrics02 = Song.create(song_link: "https://www.youtube.com/watch?v=KxZedRh_7x8",
+lyrics02 = Song.create(song_link: "https://www.youtube.com/embed/KxZedRh_7x8",
                       lyrics: "Turn me loose from your hands
                       Let me fly to distant lands
                       Over green fields, trees and mountains
@@ -172,7 +172,7 @@ lyrics02 = Song.create(song_link: "https://www.youtube.com/watch?v=KxZedRh_7x8",
 
 
 
-lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
+lyrics03 = Song.create(song_link: "https://www.youtube.com/embed/ODIvONHPqpk",
                         lyrics: "Free as a bird
                         It's the next best thing to be
                         Free as a bird
@@ -247,7 +247,7 @@ lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
 
 
 
-lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
+lyrics04 = Song.create(song_link: "https://www.youtube.com/embed/-tJYN-eG1zk",
                       lyrics: "Buddy, you're a boy, make a big noise
                       Playin' in the street gonna be a big man some day
                       You got mud on your face
@@ -323,7 +323,7 @@ lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
 
 
 
-lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
+lyrics05 = Song.create(song_link: "https://www.youtube.com/embed/XpqqjU7u5Yc",
                       lyrics: "I know your eyes in the morning sun
                       I feel you touch me in the pouring rain
                       And the moment that you wander far from me
@@ -437,7 +437,7 @@ lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
 
 
 
-lyrics06 = Song.create(song_link: "https://www.youtube.com/watch?v=qztKD75J2BM",
+lyrics06 = Song.create(song_link: "https://www.youtube.com/embed/qztKD75J2BM",
                       lyrics: "Dancing days are here again
                       As the summer evenings grow
                       I got my flower, I got my power,

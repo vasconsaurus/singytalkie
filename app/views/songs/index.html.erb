@@ -1,0 +1,10 @@
+<div class="page-wrap">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ODIvONHPqpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <% @songs.each do |song| %>
+      <iframe width="560" height="315" src=<% song.song_link %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p><%= song.song_link %></p>
+      <h2><%= song.title %></h2>
+      <h4><%= song.artist %></h4>
+      <p><%= song.genre %></p>
+    <% end %>
+</div>
