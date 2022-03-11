@@ -4,8 +4,6 @@ User.destroy_all
 Playlist.destroy_all
 puts "Database cleaned!"
 
-
-
 lyrics01 = Song.create(song_link: "https://www.youtube.com/embed/sXYIxJScSik",
                       lyrics: "There is a house in Sin City
                       They call the Rising Sun
@@ -167,10 +165,7 @@ lyrics02 = Song.create(song_link: "https://www.youtube.com/embed/KxZedRh_7x8",
 
                       Voe pra longe, pombo do horizonte, voe
                       Na direção dos sonhos
-                      Que você deixou para trás"
-                    )
-
-
+                      Que você deixou para trás")
 
 lyrics03 = Song.create(song_link: "https://www.youtube.com/embed/ODIvONHPqpk",
                         lyrics: "Free as a bird
@@ -242,10 +237,7 @@ lyrics03 = Song.create(song_link: "https://www.youtube.com/embed/ODIvONHPqpk",
                         Livre como um pássaro
                         Livre como um pássaro
 
-                        Livre"
-                      )
-
-
+                        Livre")
 
 lyrics04 = Song.create(song_link: "https://www.youtube.com/embed/-tJYN-eG1zk",
                       lyrics: "Buddy, you're a boy, make a big noise
@@ -318,10 +310,7 @@ lyrics04 = Song.create(song_link: "https://www.youtube.com/embed/-tJYN-eG1zk",
                       Todos!
                       Nós vamos sacudir você!
                       Nós vamos sacudir você!
-                      Tudo bem!"
-                    )
-
-
+                      Tudo bem!")
 
 lyrics05 = Song.create(song_link: "https://www.youtube.com/embed/XpqqjU7u5Yc",
                       lyrics: "I know your eyes in the morning sun
@@ -432,10 +421,7 @@ lyrics05 = Song.create(song_link: "https://www.youtube.com/embed/XpqqjU7u5Yc",
                       Pois vivemos num mundo de tolos
                       Que nos destroem
                       Quando todos deveriam nos deixar em paz
-                      Nós pertencemos um ao outro"
-                    )
-
-
+                      Nós pertencemos um ao outro")
 
 lyrics06 = Song.create(song_link: "https://www.youtube.com/embed/qztKD75J2BM",
                       lyrics: "Dancing days are here again
@@ -518,5 +504,4 @@ lyrics06 = Song.create(song_link: "https://www.youtube.com/embed/qztKD75J2BM",
                       Eu digo que está tudo bem você sabe está tudo bem
                       Acho que tudo está em meu coração
                       Você será minha, minha única e somente
-                      É assim que deveria começar?"
-                    )
+                      É assim que deveria começar?")
