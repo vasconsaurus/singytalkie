@@ -1,4 +1,4 @@
-class SongController < ApplicationController
+class SongsController < ApplicationController
   before_action :set_song, only: [:show]
 
   def index
@@ -6,6 +6,9 @@ class SongController < ApplicationController
   end
 
   def show
+  end
+
+  def text
   end
 
   private
