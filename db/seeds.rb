@@ -4,8 +4,6 @@ User.destroy_all
 Playlist.destroy_all
 puts "Database cleaned!"
 
-
-
 lyrics01 = Song.create(song_link: "https://www.youtube.com/watch?v=sXYIxJScSik",
                       lyrics: "There is a house in Sin City
                       They call the Rising Sun
@@ -168,9 +166,7 @@ lyrics02 = Song.create(song_link: "https://www.youtube.com/watch?v=KxZedRh_7x8",
                       Voe pra longe, pombo do horizonte, voe
                       Na direção dos sonhos
                       Que você deixou para trás"
-                    )
-
-
+                      )
 
 lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
                         lyrics: "Free as a bird
@@ -245,8 +241,6 @@ lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
                         Livre"
                       )
 
-
-
 lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
                       lyrics: "Buddy, you're a boy, make a big noise
                       Playin' in the street gonna be a big man some day
@@ -320,8 +314,6 @@ lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
                       Nós vamos sacudir você!
                       Tudo bem!"
                     )
-
-
 
 lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
                       lyrics: "I know your eyes in the morning sun
@@ -434,8 +426,6 @@ lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
                       Quando todos deveriam nos deixar em paz
                       Nós pertencemos um ao outro"
                     )
-
-
 
 lyrics06 = Song.create(song_link: "https://www.youtube.com/watch?v=qztKD75J2BM",
                       lyrics: "Dancing days are here again
