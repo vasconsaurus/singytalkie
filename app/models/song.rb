@@ -13,14 +13,4 @@ class Song < ApplicationRecord
     kword = words.select { |word| word.size >= 3 }.sample
     lyrics.gsub(kword, "*" * kword.size)
   end
-
-
-
-
-
-
-
-
-
-
 end
