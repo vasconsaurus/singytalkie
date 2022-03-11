@@ -118,7 +118,7 @@ lyrics02 = Song.create(song_link: "https://www.youtube.com/watch?v=KxZedRh_7x8",
 
                       Fly away skyline pigeon fly
                       Towards the dreams
-                      You've left so very far behind"
+                      You've left so very far behind",
                       title: "Skyline Pigeon",
                       artist: "Elton John",
                       genre: "Pop",
@@ -206,7 +206,7 @@ lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
                         Free as a bird
                         Free as a bird
 
-                        Free"
+                        Free",
 
                         title: "Free as a Bird",
                         artist: "The Beatles",
@@ -281,7 +281,7 @@ lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
                       Everybody
                       We will, we will rock you
                       We will, we will rock you
-                      Alright"
+                      Alright",
                       title: "We Will Rock You",
                       artist: "Queen",
                       genre: "Classic Rock",
@@ -376,7 +376,7 @@ lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
                       'Cause we're living in a world of fools
                       Breaking us down
                       When they all should let us be
-                      We belong to you and me"
+                      We belong to you and me",
                       title: "How Deep is your Love",
                       artist: "Bee Gees",
                       genre: "Pop",
@@ -476,7 +476,7 @@ lyrics06 = Song.create(song_link: "https://www.youtube.com/watch?v=qztKD75J2BM",
                       I said it's alright, You know it's alright
                       Well it's all in my heart
                       You'll be my only, my one and only.
-                      Is that the way it should start?"
+                      Is that the way it should start?",
                       title: "Dancing Days",
                       artist: "Led Zeppelin",
                       genre: "Classic Rock",
