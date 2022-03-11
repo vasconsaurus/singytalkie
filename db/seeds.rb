@@ -4,8 +4,6 @@ User.destroy_all
 Playlist.destroy_all
 puts "Database cleaned!"
 
-
-
 lyrics01 = Song.create(song_link: "https://www.youtube.com/watch?v=sXYIxJScSik",
                       lyrics: "There is a house in Sin City
                       They call the Rising Sun
@@ -118,7 +116,7 @@ lyrics02 = Song.create(song_link: "https://www.youtube.com/watch?v=KxZedRh_7x8",
 
                       Fly away skyline pigeon fly
                       Towards the dreams
-                      You've left so very far behind"
+                      You've left so very far behind",
                       title: "Skyline Pigeon",
                       artist: "Elton John",
                       genre: "Pop",
@@ -168,9 +166,7 @@ lyrics02 = Song.create(song_link: "https://www.youtube.com/watch?v=KxZedRh_7x8",
                       Voe pra longe, pombo do horizonte, voe
                       Na direção dos sonhos
                       Que você deixou para trás"
-                    )
-
-
+                      )
 
 lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
                         lyrics: "Free as a bird
@@ -206,7 +202,7 @@ lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
                         Free as a bird
                         Free as a bird
 
-                        Free"
+                        Free",
 
                         title: "Free as a Bird",
                         artist: "The Beatles",
@@ -245,8 +241,6 @@ lyrics03 = Song.create(song_link: "https://www.youtube.com/watch?v=ODIvONHPqpk",
                         Livre"
                       )
 
-
-
 lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
                       lyrics: "Buddy, you're a boy, make a big noise
                       Playin' in the street gonna be a big man some day
@@ -281,7 +275,7 @@ lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
                       Everybody
                       We will, we will rock you
                       We will, we will rock you
-                      Alright"
+                      Alright",
                       title: "We Will Rock You",
                       artist: "Queen",
                       genre: "Classic Rock",
@@ -320,8 +314,6 @@ lyrics04 = Song.create(song_link: "https://www.youtube.com/watch?v=-tJYN-eG1zk",
                       Nós vamos sacudir você!
                       Tudo bem!"
                     )
-
-
 
 lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
                       lyrics: "I know your eyes in the morning sun
@@ -376,7 +368,7 @@ lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
                       'Cause we're living in a world of fools
                       Breaking us down
                       When they all should let us be
-                      We belong to you and me"
+                      We belong to you and me",
                       title: "How Deep is your Love",
                       artist: "Bee Gees",
                       genre: "Pop",
@@ -435,8 +427,6 @@ lyrics05 = Song.create(song_link: "https://www.youtube.com/watch?v=XpqqjU7u5Yc",
                       Nós pertencemos um ao outro"
                     )
 
-
-
 lyrics06 = Song.create(song_link: "https://www.youtube.com/watch?v=qztKD75J2BM",
                       lyrics: "Dancing days are here again
                       As the summer evenings grow
@@ -476,7 +466,7 @@ lyrics06 = Song.create(song_link: "https://www.youtube.com/watch?v=qztKD75J2BM",
                       I said it's alright, You know it's alright
                       Well it's all in my heart
                       You'll be my only, my one and only.
-                      Is that the way it should start?"
+                      Is that the way it should start?",
                       title: "Dancing Days",
                       artist: "Led Zeppelin",
                       genre: "Classic Rock",

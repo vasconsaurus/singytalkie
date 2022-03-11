@@ -10,3 +10,37 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.page-wrap {
+  margin: 100px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $orange;
+  margin-bottom: 1.3rem;
+ }
+
+p, a {
+  color: $gray-md;
+  font-size: 1.3rem;
+  line-height: 0.75rem;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: solid underline $orange 3px;
+  transition: all 0.3s linear;
+}
+
+a:hover{
+text-decoration-color: $green-md;
+color: $blue-md;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
