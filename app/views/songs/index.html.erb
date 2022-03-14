@@ -1,4 +1,9 @@
 <div class="page-wrap">
+<h1>PICK A SONG! START LEARNING!</h1>
+
+    <h4>Don't know what to listen to to?</h4>
+    <div class="button button-submit"> <%= link_to 'Random!', random_path %></div>
+
     <% @songs.each do |song| %>
     <section class="song-cards">
       <div class="song-header">
