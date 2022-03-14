@@ -1,12 +1,10 @@
 class PlaylistsController < ApplicationController
-
-  def new
-
+  def index
+    @song = Song.all
+    @playlists = @song
   end
 
-  def create
+  def show
 
   end
-
-  def show; end
 end

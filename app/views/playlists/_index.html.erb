@@ -1,0 +1,9 @@
+<div class="page-wrap">
+    <% @playlists.each do |song| %>
+    <section class="song-cards">
+      <h2><%= song.title.upcase %></h2>
+      <iframe width="560" height="315" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="button button-submit"> <%= link_to 'Learn this song!', song_path(song) %></div>
+      </section>
+    <% end %>
+</div>
