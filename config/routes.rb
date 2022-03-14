@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'pages#index'
   resources :songs, only: %i[show index]
 
   get 'text', to: 'songs#text', as: :text

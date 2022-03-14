@@ -1,74 +1,164 @@
 .button {
   border-radius: 30px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+
+  a {
+    text-decoration: none;
+  }
 }
+
 
 .button-login {
   border: 2px solid $green-md;
   color: $green-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+
+  a {
+    color: $green-md;
+    text-decoration: none;
+  }
 
   &:hover {
-  background-color: $green-md;
-  color: white;
- }
+    background-color: $green-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
 }
+
 
 .button-recover-password {
-  border: 2px solid $blue-light;
-  color: $blue-light;
-  margin: 10px;
-
-&:hover{
-  background-color: $blue-light;
-  color: white;
- }
-}
-
-.button-signup{
   border: 2px solid $blue-md;
   color: $blue-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
 
-&:hover{
-  background-color: $blue-md;
-  color: white;
- }
+  a {
+    color: $blue-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $blue-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
 }
+
+
+.button-signup {
+  border: 2px solid $blue-md;
+  color: $blue-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+
+  a {
+    color: $blue-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $blue-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
+}
+
 
 .button-back{
-  border: 2px solid $green-light;
-  color: $green-light;
+  border: 2px solid $green-md;
+  color: $green-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
 
-&:hover{
-  background-color: $green-light;
-  color: white;
- }
+  a {
+    color: $green-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $green-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
 }
+
 
 .button-submit{
   border: 2px solid $orange-md;
   color: $orange-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
 
-&:hover{
-  background-color: $orange-md;
-  color: white;
+  a {
+    color: $orange-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $orange-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
 }
-}
+
 
 .button-delete-account{
   border: 2px solid $orange-md;
-  color: $orange-md;
-
-&:hover{
-  background-color: $orange-md;
   color: white;
- }
+  background-color: $orange-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: white;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: $orange-md;
+  }
 }
 
-.button-save-updates{
+
+.button-save-updates {
   border: 2px solid $orange-md;
   color: $orange-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
 
-&:hover{
-  background-color: $orange-md;
-  color: white;
- }
+  a {
+    color: $orange-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $orange-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
 }
