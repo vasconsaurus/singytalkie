@@ -16,6 +16,10 @@
     </div>
   </div>
   <div class="avatar-square">
-    <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
+       <% if current_user and current_user.photo.attached? %>
+           <%= cl_image_tag current_user.photo.key %>
+       <% else %>
+           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
+       <% end %>
   </div>
  </section>
