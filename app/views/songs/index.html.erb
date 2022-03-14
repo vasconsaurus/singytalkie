@@ -6,9 +6,11 @@
 
     <% @songs.each do |song| %>
     <section class="song-cards">
-      <h2><%= song.title.upcase %></h2>
-      <h4><%= song.artist.upcase %></h4>
-      <p><%= song.genre %></p>
+      <div class="song-header">
+        <h2><%= song.title.upcase %></h2>
+        <h4><%= song.artist.upcase %></h4>
+        <p><%= song.genre %></p>
+      </div>
       <iframe width="560" height="315" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="button button-submit"> <%= link_to 'Learn this song!', song_path(song) %></div>
       </section>
