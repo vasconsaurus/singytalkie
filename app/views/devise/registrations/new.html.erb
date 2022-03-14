@@ -1,3 +1,6 @@
+<div class="container-forms"> ​
+<div class="container w-25">
+
 <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -7,7 +10,7 @@
     <%= f.input :username,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "username" }%>
+                input_html: { autocomplete: "username" }, class:"font"%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,7 +18,7 @@
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password" }, class:"form-hint" %>
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
@@ -25,8 +28,12 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class:" button button-signup d-block" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path(resource_name), class:"button button-login d-block" %><br />
+<% end %>
+</div>
+</div>
