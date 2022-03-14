@@ -7,10 +7,9 @@ class SongsController < ApplicationController
   def show
   end
 
-  def text
-  end
-
   def random
+    @song = Song.order('RANDOM()').first
+    redirect_to @song
   end
 
   private

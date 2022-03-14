@@ -32,18 +32,18 @@
 
 
 .button-recover-password {
-  border: 2px solid $blue-md;
-  color: $blue-md;
+  border: 2px solid $orange-md;
+  color: $orange-md;
   padding: 0.75rem 1rem;
   margin: 0.5rem 0;
 
   a {
-    color: $blue-md;
+    color: $orange-md;
     text-decoration: none;
   }
 
   &:hover {
-    background-color: $blue-md;
+    background-color: $orange-md;
     transition: 0.3s linear;
   }
 
@@ -54,18 +54,18 @@
 
 
 .button-signup {
-  border: 2px solid $blue-md;
-  color: $blue-md;
+  border: 2px solid $orange-md;
+  color: $orange-md;
   padding: 0.75rem 1rem;
   margin: 0.5rem 0;
 
   a {
-    color: $blue-md;
+    color: $orange-md;
     text-decoration: none;
   }
 
   &:hover {
-    background-color: $blue-md;
+    background-color: $orange-md;
     transition: 0.3s linear;
   }
 
