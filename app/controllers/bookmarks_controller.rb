@@ -1,13 +1,15 @@
 class BookmarksController < ApplicationController
-  def new
+  def index
+    @songs = Song.all
+    @bookmarks = @songs
+  end
 
+  def new
   end
 
   def create
-
   end
 
   def destroy
-
   end
 end

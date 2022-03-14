@@ -4,6 +4,10 @@ class PlaylistsController < ApplicationController
     @playlists = @song
   end
 
+  def new
+    @playlist = Playlist.new
+  end
+
   def show
 
   end

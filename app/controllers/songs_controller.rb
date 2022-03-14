@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show]
   def index
-    @song = Song.all
+    @songs = Song.all
   end
 
   def show
