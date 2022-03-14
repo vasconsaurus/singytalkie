@@ -21,11 +21,15 @@ h1, h2, h3, h4, h5, h6 {
   color: $orange;
  }
 
-p, a {
+p, a, li {
   color: $gray-md;
   font-size: 1.3rem;
-  line-height: 1.5rem;
+  line-height: 1.95rem;
   font-weight: lighter;
+}
+
+.p-white, .a-white, .li-white {
+  color: white;
 }
 
 a {
