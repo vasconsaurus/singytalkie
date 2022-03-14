@@ -1,18 +1,20 @@
 <div class="page-wrap">
-<h1>PICK A SONG! START LEARNING!</h1>
+  <h1 class="txt-blue-md">PICK A SONG! START LEARNING!</h1>
 
-    <h4>Don't know what to listen to to?</h4>
-    <div class="button button-submit"> <%= link_to 'Random!', random_path %></div>
+  <section class="random">
+    <h4><%= "Don't know what to listen to to?".upcase%></h4>
+    <div class="button button-submit"> <%= link_to 'Pick a song for me!', random_path %></div>
+  </section>
 
-    <% @songs.each do |song| %>
+  <% @songs.each do |song| %>
     <section class="song-cards">
       <div class="song-header">
-        <h2><%= song.title.upcase %></h2>
-        <h4><%= song.artist.upcase %></h4>
+        <h2 class="txt-blue-md"><%= song.title.upcase %></h2>
+        <h4 class="txt-blue-md"><%= song.artist.upcase %></h4>
         <p><%= song.genre %></p>
       </div>
       <iframe width="560" height="315" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="button button-submit"> <%= link_to 'Learn this song!', song_path(song) %></div>
       </section>
-    <% end %>
+  <% end %>
 </div>

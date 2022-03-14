@@ -16,36 +16,3 @@
   display: flex;
   flex-flow: column nowrap;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  color: $orange;
- }
-
-p, a, li {
-  color: $gray-md;
-  font-size: 1.3rem;
-  line-height: 1.95rem;
-  font-weight: lighter;
-}
-
-.p-white, .a-white, .li-white {
-  color: white;
-}
-
-a {
-  text-decoration: solid underline $orange 3px;
-  transition: all 0.3s linear;
-}
-
-a:hover{
-text-decoration-color: $green-md;
-color: $blue-md;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.bold {
-  font-weight: bold;
-}

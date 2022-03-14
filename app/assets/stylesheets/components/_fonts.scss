@@ -1,0 +1,61 @@
+
+h1, h2, h3, h4, h5, h6 {
+  color: $orange;
+ }
+
+h1 {
+  font-size: calc(2.75rem + 0.9vw);
+}
+
+h2 {
+  font-size: calc(1.75rem + 0.9vw);
+}
+
+p, a, li {
+  color: $gray-md;
+  font-size: 1.5rem;
+  line-height: 1.95rem;
+  font-weight: lighter;
+}
+
+.p-white, .a-white, .li-white {
+  color: white;
+}
+
+a {
+  text-decoration: solid underline $orange 3px;
+  transition: all 0.3s linear;
+}
+
+a:hover{
+text-decoration-color: $green-md;
+color: $blue-md;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+.txt-blue-md {
+  color: $blue-md;
+}
+.txt-blue-light {
+  color: $blue-light;
+}
+.txt-green-md {
+  color: $green-md;
+}
+.txt-green-light {
+  color: $green-light;
+}
+.txt-orange-md {
+  color: $orange-md;
+}
+.txt-gray-md {
+  color: $gray-md;
+}
