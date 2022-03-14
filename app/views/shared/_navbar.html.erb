@@ -23,9 +23,7 @@
   </div>
   <div class="avatar-square">
        <% if current_user and current_user.photo.attached? %>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
-
-           <%# <%= cl_image_tag current_user.photo.key %>
+           <%= cl_image_tag current_user.photo.key %>
        <% else %>
            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
        <% end %>
