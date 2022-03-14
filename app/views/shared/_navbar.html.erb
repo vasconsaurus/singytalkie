@@ -6,7 +6,7 @@
       <input class="checkbox-trigger" type="checkbox"  />
       <div class="menu-content">
           <ul>
-            <li><%= link_to "Pick a song", songs_path, method: :get %></li>
+            <li class="first-li"><%= link_to "Pick a song", songs_path, method: :get %></li>
             <% if user_signed_in? %>
               <li><%= link_to "Edit Profile", edit_user_registration_path, method: :get %></li>
               <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
@@ -17,7 +17,7 @@
         <div class="hamburger-menu"></div>
       </div>
     </div>
-    <h1 class="logo-nav"> SINGYTALKIE </h1>
+    <h1 class="logo-nav"> <%= link_to "SINGYTALKIE", root_path, method: :get %></h1>
   </div>
   <div class="avatar-square">
     <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
