@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'pages#index'
   resources :songs, only: %i[show index]
 
-  get 'text', to: 'songs#text', as: :text
+  get ':slug', to: 'pages#show', as: 'pages'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

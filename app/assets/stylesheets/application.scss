@@ -13,17 +13,18 @@
 
 .page-wrap {
   margin: 100px;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: $orange;
-  margin-bottom: 1.3rem;
  }
 
 p, a {
   color: $gray-md;
   font-size: 1.3rem;
-  line-height: 0.75rem;
+  line-height: 1.5rem;
   font-weight: lighter;
 }
 
