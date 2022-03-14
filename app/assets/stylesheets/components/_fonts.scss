@@ -3,7 +3,11 @@ h1, h2, h3, h4, h5, h6 {
   color: $orange;
  }
 
- h2 {
+h1 {
+  font-size: calc(2.75rem + 0.9vw);
+}
+
+h2 {
   font-size: calc(1.75rem + 0.9vw);
 }
 
