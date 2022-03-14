@@ -1,0 +1,24 @@
+.container-forms {
+  background-color: $blue-md;
+  display: flex;
+  height: 100vh;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-inputs{
+  font-family: nunito;
+  font-weight: 500;
+  color: white;
+
+  .form-text{
+    color: $orange-md !important;
+    font-weight: 300;
+  }
+}
+
+.style-btn{
+  color: $orange-md;
+  font-weight: 400;
+}
