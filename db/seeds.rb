@@ -38,9 +38,7 @@ lyrics01 = Song.create(song_link: "https://www.youtube.com/embed/sXYIxJScSik",
                       title: "House of Rising Sun",
                       artist: "Five Finger Death Punch",
                       genre: "Heavy Metal",
-                      translation: "Casa do Sol Nascente
-
-                      Há uma casa na Cidade do Pecado
+                      translation: "Há uma casa na Cidade do Pecado
                       Eles chamam de o Sol Nascente
                       E tem sido a ruína de muitos garotos pobres
                       E Deus, eu sei que eu sou um deles

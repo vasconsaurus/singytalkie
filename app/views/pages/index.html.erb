@@ -1,6 +1,7 @@
+
 <section class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1557787163-1635e2efb160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80);">
-  <div class="page-wrap">
-    <h1><%= 'Have you ever wondered if learning a laguange could be more fun?'.upcase %></h1>
+  <div class="page-wrap banner-wrap">
+    <h1><%= 'Could learning a language be more fun?'.upcase %></h1>
     <p> With SingyTalkie you can learn with your favorite songs!</p>
   <div class="button button-signup"><%= link_to "Sign up", new_user_registration_path %></div>
   </div>
@@ -8,7 +9,7 @@
 
 
 <section class="about page-wrap">
-  <h2><%= 'What is this Singytalkie you are talking about?'.upcase %></h2>
+  <h2><%= 'What is Singytalkie?'.upcase %></h2>
   <p> Singytalkie makes learning a new language fun! You can choose a song, and learn it's lyrics by listening, filling in the blanks and learning the translation. When you lack motivation you can always pick a song and sing!</p>
 </section>
 
@@ -19,10 +20,9 @@
     <li class="li-white">Listen to your favorite songs!</li>
     <li class="li-white">Fill the blanks!</li>
     <li class="li-white">Read the translation!</li>
-    <li class="li-white">View your score and specs!</li>
+    <li class="li-white">View your score!</li>
     <li class="li-white">Become a master of your favorite song!</li>
     </ul>
   </div>
 </section>
-
-<footer>footer</footer>
+<%= render 'shared/footer' %>

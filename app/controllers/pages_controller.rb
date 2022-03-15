@@ -15,4 +15,10 @@ class PagesController < ApplicationController
 
     render "pages/#{slug}"
   end
+
+  # private
+
+  # def article_params
+  #   params.require(:article).permit(:title, :body, :photo)
+  # end
 end
