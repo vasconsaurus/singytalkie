@@ -23,6 +23,9 @@
                     hint: "we need your current password to confirm your changes",
                     required: true,
                     input_html: { autocomplete: "current-password" } %>
+        <%= f.input :photo,
+                    required: true,
+                    as: :file %>
       </div>
 
         <%= f.button :submit, "Update", class: "button button-submit button-a" %>
