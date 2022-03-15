@@ -31,6 +31,7 @@
 .logo-nav {
   font-weight: 900;
   align-self: center;
+  margin-bottom: 19px;
 }
 
 /**
@@ -67,6 +68,7 @@
     height: 4px;
     margin: 1.3em 3em;
     transition: background 0.3s;
+    padding-right: 20px;
 }
 
 .hamburger-menu::before, .hamburger-menu::after {
@@ -92,7 +94,7 @@
 }
 
 .checkbox-trigger:checked {
-  left: 202px;
+  // left: 202px;
 }
 
 .checkbox-trigger:checked + .menu-content .hamburger-menu {
@@ -150,4 +152,17 @@
 }
 
 // .menu-content ul li:hover {
+// }
+
+// .menu-style {
+//   z-index: 1;
+//   position: absolute;
+// }
+
+// .menu-content ul::before {
+//   width: 50px;
+// }
+
+// .menu-content ul::after {
+//   width: 200px;
 // }
