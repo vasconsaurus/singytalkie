@@ -1,0 +1,14 @@
+.footer-wrap {
+  padding: 2rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+.footer-text {
+  font-size: 1rem;
+}

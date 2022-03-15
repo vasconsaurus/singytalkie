@@ -11,8 +11,14 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  position: relative;
+}
+
 .page-wrap {
-  margin: 100px;
+  padding: 100px;
   display: flex;
   flex-flow: column nowrap;
+  height: 100%;
+  position: relative;
 }

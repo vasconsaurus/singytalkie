@@ -1,8 +1,9 @@
 <div class="page-wrap">
-  <%= link_to "<<back", songs_path %>
   <div class="row">
     <div class="column">
-      <iframe class="video-show" width="560" height="315" src="<%= @song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-container">
+        <iframe class="video-show" width="560" height="315" src="<%= @song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <div class="song-header">
         <h2><%= @song.title.upcase %></h2>
         <h4><%= @song.artist.upcase %></h4>
@@ -10,9 +11,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <div class="row mb-5">
     <div class="col-12 col-md-6">
@@ -29,14 +27,8 @@
       </div>
     </div>
   </div>
-</div>
 
-
-
-
-
-
-
+<%= link_to "Back", :back, class: "button button-back button-a" %>
 
 
 <%# ------------ TRANSLATION ------------ %>
