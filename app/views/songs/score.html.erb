@@ -11,9 +11,6 @@
     </div>
   </div>
 
-
-
-
   <div class="row mb-5">
     <div class="col-12 col-md-6">
      <div class="card border-secondary mb-3">
@@ -21,33 +18,21 @@
           <h5 class = card-title> LYRICS </h5>
         </div>
         <div class="card-body bg-transparent bg-opacity-50">
-            <%= form_with url: score_song_path(@song), method: :get do |form|  %>
-            <%= @song.complete_song(:beginner) %>
-            <%= form.submit "Submit!", class: "button button-submit" %>
-          <% end %>
+          <%= @song.lyrics  %>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-<%# ------------ TRANSLATION ------------ %>
-
-<%# <div class="col-12 col-md-6">
-  <div class="card border-secondary mb-3 position-behind">
-    <div class="card-header bg-transparent border-secondary pt-3">
-      <h5> TRANSLATION </h5>
-    </div>
-    <div class="card-body bg-transparent bg-opacity-50">
-      <p class="mb-1"><%= @song.translation ></p>
+  <div class="row mb-5">
+  <div class="col-12 col-md-6">
+     <div class="card border-secondary mb-3">
+        <div class="card-header bg-transparent border-secondary pt-3">
+          <h5 class = card-title> RATING! </h5>
+        </div>
+        <div class="card-body bg-transparent bg-opacity-50">
+          <%= @final_rating %>
+          </div>
+      </div>
     </div>
   </div>
-</div> %>
+</div>
