@@ -25,15 +25,15 @@
                     input_html: { autocomplete: "current-password" } %>
       </div>
 
-        <%= f.button :submit, "Update", class: "button button-submit" %>
+        <%= f.button :submit, "Update", class: "button button-submit button-a" %>
     <% end %>
 
     <div class="delete-area">
-      <h5>Unhappy? Cancel my account</h5>
-      <div class="button button-delete-account"><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
+      <h5 class="detele-section-header">Unhappy?</h5>
+      <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button button-delete-account button-a" %>
     </div>
 
-    <div class="button button-back"><%= link_to "Back", :back %></div>
+    <%= link_to "Back", :back, class: "button button-back button-a" %>
 
   </div>
 </div>

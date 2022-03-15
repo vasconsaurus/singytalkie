@@ -27,12 +27,12 @@
       </div>
 
       <div class="form-actions">
-        <div class="button button-submit"><%= f.button :submit, "Sign Up" %></div>
+        <%= f.button :submit, "Sign Up", class:"button button-submit button-a" %>
       </div>
     <% end %>
 
     <%- if controller_name != 'sessions' %>
-      <div class="button button-login"><%= link_to "Login", new_user_session_path %></div>
+      <%= link_to "Login", new_user_session_path, class:"button button-login button-a" %>
     <% end %>
   </div>
 </div>
