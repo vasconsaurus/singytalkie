@@ -2,17 +2,14 @@ class BookmarksController < ApplicationController
   before_action :set_bookmark, only: :destroy
   before_action :set_playlist, only: %i[new create]
 
-  def new
-    @bookmark = Bookmark.new
-  end
-
   def create
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.playlist = @playlist
+
     if @bookmark.save
       redirect_to playlist_path(@playlist)
     else
-      render :new
+      render "playlists/show"
     end
   end
 
@@ -24,7 +21,7 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:playlist, :song)
+    params.require(:bookmark).permit(:playlist, :song_id)
   end
 
   def set_bookmark
