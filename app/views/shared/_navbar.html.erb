@@ -14,16 +14,20 @@
               <li><%= link_to "Login", new_user_session_path %></li>
             <% end %>
           </ul>
-        <div class="hamburger-menu"></div>
+          <div class="menu-style">
+            <div class="hamburger-menu"></div>
+          </div>
       </div>
     </div>
     <h1 class="logo-nav"> <%= link_to "SINGYTALKIE", root_path, method: :get %></h1>
   </div>
-  <div class="avatar-square">
-       <% if current_user and current_user.photo.attached? %>
-           <%= cl_image_tag current_user.photo.key %>
-       <% else %>
-           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
-       <% end %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="avatar-square">
+        <% if current_user and current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key %>
+        <% else %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
+        <% end %>
+    </div>
+  <% end %>
  </section>
