@@ -3,7 +3,6 @@
     <h1><%= @playlist.title %></h1>
   </div>
 </div>
-
   <div>
     <h3 class="text-center watch-text">Add a song to the playlist</h3>
     <%= simple_form_for [@playlist, @bookmark] do |f| %>
@@ -12,6 +11,5 @@
       <% end %>
   </div>
 
-
-  <%= link_to '<< home', root_path, class: 'btn btn-outline-light btn-sm my-3' %>
+  <%= link_to '<< home', root_path %>
 </div>
