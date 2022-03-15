@@ -4,15 +4,13 @@
   </div>
 </div>
 
-
-    <div>
-      <h3 class="text-center watch-text">Add a song to the playlist</h3>
-      <%= simple_form_for [@playlist, @bookmark] do |f| %>
-        <%= f.association :song, label:false, collection: Song.all.order(:title), prompt: 'Choose a song', input_html: { class: 'form-select' } %>
-
-        <%= f.submit class:'btn btn-outline-secondary w-100' %>
+  <div>
+    <h3 class="text-center watch-text">Add a song to the playlist</h3>
+    <%= simple_form_for [@playlist, @bookmark] do |f| %>
+      <%= f.association :song, label:false, collection: Song.all.order(:title), prompt: 'Choose a song', input_html: { class: 'form-select' } %>
+      <%= f.submit %>
       <% end %>
-    </div>
+  </div>
 
 
   <%= link_to '<< home', root_path, class: 'btn btn-outline-light btn-sm my-3' %>
