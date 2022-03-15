@@ -1,8 +1,36 @@
-.song-cards {
-  align-self: center;
-  margin-bottom: 4rem;
+.card-container {
+  // display: flex;
+  // flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
+
+.song-cards {
+  height: 25rem;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.song-cards:hover{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
 
 .random {
   margin: 4rem 0 6rem 0;
+}
+
+@media(max-width: 992px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }
