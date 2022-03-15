@@ -1,5 +1,4 @@
 .banner {
-  background-size: cover;
   background-position: center;
   padding: 15px 0;
   height: 100vh;
@@ -21,4 +20,16 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin-bottom: 2rem;
+}
+
+@media(max-width: 992px) {
+  .banner h1 {
+    font-size: 54px;
+  }
+}
+
+@media(max-width: 768px) {
+  .banner h1  {
+    font-size: 44px;
+  }
 }
