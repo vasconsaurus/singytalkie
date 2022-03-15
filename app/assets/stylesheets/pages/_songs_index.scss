@@ -2,22 +2,37 @@
   // display: flex;
   // flex-flow: row wrap;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
 .song-cards {
-  height: 25rem;
   padding: 2rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: space-between;
+  border: 1px solid black;
+  background-color: white;
 }
 
 .song-cards:hover{
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+  border: 2px solid $blue-md;
+}
+
+.song-cards-header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.song-cards-info {
+  margin-bottom: 3rem;
+}
+
+.song-cards-video {
+  padding-bottom: 2rem;
+}
 
 .random {
   margin: 4rem 0 6rem 0;
