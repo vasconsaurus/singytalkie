@@ -25,7 +25,7 @@ class Song < ApplicationRecord
       selected_words << word
       split_sentences[sentence_index][word_index] = "<input name='word[#{word.delete!("\n")}]' type='text' class='word-input'>"
     end
-    joined_lyrics = split_sentences.map { |sentence| sentence.join(" ")}
+    joined_lyrics = split_sentences.map { |sentence| sentence.join(" ") }
     joined_lyrics.join("\n").gsub(/\n/, '<br/>').html_safe
   end
 end

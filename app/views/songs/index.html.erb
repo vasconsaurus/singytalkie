@@ -15,6 +15,11 @@
             <h2 class="txt-blue-md"><%= song.title.upcase %></h2>
             <h4 class="txt-blue-md"><%= song.artist.upcase %></h4>
             <p><%= song.genre %></p>
+            <div class="d-flex flex-column">
+              <%= link_to 'Beginner ★☆☆', song_path(song), class: "button button-submit" %>
+              <%= link_to 'Intermediate ★★☆', song_path(song), class: "button button-submit" %>
+              <%= link_to 'Advanced ★★★', song_path(song), class: "button button-submit" %>
+            </div>
           </div>
         </div>
         <div class="button button-submit"> <%= link_to 'Learn this song!', song_path(song) %></div>
