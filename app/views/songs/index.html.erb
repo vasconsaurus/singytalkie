@@ -12,9 +12,9 @@
         <div class="song-cards-header">
           <iframe class="song-cards-video" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           <div class="song-cards-info">
+            <p class="genre-txt"><%= song.genre %></p>
             <h2 class="txt-blue-md"><%= song.title.upcase %></h2>
             <h4 class="txt-blue-md"><%= song.artist.upcase %></h4>
-            <p><%= song.genre %></p>
           </div>
         </div>
         <div class="button button-submit"> <%= link_to 'Learn this song!', song_path(song) %></div>
