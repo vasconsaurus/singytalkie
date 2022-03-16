@@ -8,32 +8,19 @@
     </div>
   </section>
 
-<div data-controller="search-songs">
-  <%= form_with url: songs_path, method: :get, html: { class:
-    'mb-4', data: { search_songs_target: 'form' } } do |f| %>
-    <%= f.text_field :query,
-                     class: "form-control",
-                     placeholder: 'Type a song title',
-                     value: params[:query],
-                     data: { search_songs_target: 'input',
-                             action: 'keyup->search-movies#update' } %>
-  <% end %>
-
-  <section class="card-container">
-    <% @songs.each do |song| %>
-      <div class="song-cards">
-        <div class="song-cards-header">
-          <iframe class="song-cards-video" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          <div class="song-cards-info">
-            <p class="genre-txt"><%= song.genre %></p>
-            <h2 class="txt-blue-md"><%= song.title.upcase %></h2>
-            <h4 class="txt-blue-md"><%= song.artist.upcase %></h4>
-          </div>
-          <div class="button button-submit">
-            <%= link_to 'Learn this song!', song_path(song) %>
-          </div>
-        </div>
-      </div>
+  <div data-controller="search-songs">
+    <%= form_with url: songs_path, method: :get, html: { class:
+      'mb-4', data: { search_songs_target: 'form' } } do |f| %>
+      <%= f.text_field :query,
+                      class: "form-control",
+                      placeholder: 'Type a song title',
+                      value: params[:query],
+                      data: { search_songs_target: 'input',
+                              action: 'keyup->search-songs#update' } %>
     <% end %>
-  </section>
+
+    <section class="card-container"  data-search-songs-target="list">
+      <% render "list", songs:@songs %>
+    </section>
+  </div>
 </div>
