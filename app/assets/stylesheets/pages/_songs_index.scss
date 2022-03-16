@@ -1,46 +1,3 @@
-.cards-wrap {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-.card-container {
-  // display: flex;
-  // flex-flow: row wrap;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin-bottom: 6rem;
-}
-
-.song-cards {
-  padding: 2rem;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid black;
-  background-color: white;
-}
-
-.song-cards:hover{
-  border: 2px solid $blue-md;
-}
-
-.song-cards-header {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-.song-cards-info {
-  margin-bottom: 3rem;
-}
-
-.song-cards-video {
-  padding-bottom: 2rem;
-}
-
 .random {
   margin: 4rem 0 6rem 0;
   display: flex;
@@ -49,16 +6,4 @@
   align-items: center;
   row-gap: 0.5rem;
   column-gap: 2rem;
-}
-
-@media(max-width: 992px) {
-  .card-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media(max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
 }
