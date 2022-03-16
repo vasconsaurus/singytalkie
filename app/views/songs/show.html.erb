@@ -24,7 +24,8 @@
     <div class="song-cards">
       <h5 class = "song-card-title"> TRANSLATION </h5>
       <div>
-        <%= @song.translation %>
+        <% translation = @song.translation %>
+        <%= translation_with_breaks(translation) %>
       </div>
     </div>
   </section>
