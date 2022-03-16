@@ -11,7 +11,7 @@ class SongsController < ApplicationController
     rating = 0
     @words = params.to_unsafe_h[:word]
     @words.each { |key, value| rating += 1 if key == value }
-    @final_rating = "#{rating.to_f * 10}%"
+    @final_rating = rating * 10
   end
 
   def random
