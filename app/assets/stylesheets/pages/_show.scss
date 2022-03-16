@@ -1,7 +1,8 @@
-.position-behind {
-  z-index: -1;
-}
-
 .video-show {
   margin: 2rem 0;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
 }

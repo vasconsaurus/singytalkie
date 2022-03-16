@@ -1,8 +1,9 @@
-.song-cards {
-  align-self: center;
-  margin-bottom: 4rem;
-}
-
 .random {
   margin: 4rem 0 6rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  column-gap: 2rem;
 }

@@ -23,12 +23,9 @@ class Song < ApplicationRecord
         word = split_sentences[sentence_index][word_index]
       end
       selected_words << word
-      split_sentences[sentence_index][word_index] = "[INPUT]"
+      split_sentences[sentence_index][word_index] = "<input name='word[#{word.delete!("\n")}]' type='text' class='word-input'>"
     end
-    split_sentences.map { |sentence| sentence.join(" ") }.join("\n")
+    joined_lyrics = split_sentences.map { |sentence| sentence.join(" ")}
+    joined_lyrics.join("\n").gsub(/\n/, '<br/>').html_safe
   end
 end
-
-
-    #   kword = words.select { |word| word.size >= 3 }.sample
-    #   lyric_changed.gsub(kword, "*" * kword.size)

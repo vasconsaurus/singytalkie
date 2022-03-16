@@ -1,10 +1,17 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show]
+  before_action :set_song, only: [:show, :score]
   def index
     @songs = Song.all
   end
 
   def show
+  end
+
+  def score
+    rating = 0
+    @words = params.to_unsafe_h[:word]
+    @words.each { |key, value| rating += 1 if key == value }
+    @final_rating = "#{rating.to_f * 10}%"
   end
 
   def random

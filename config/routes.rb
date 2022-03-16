@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#index'
-  resources :songs, only: %i[show index]
+
+  resources :songs, only: %i[show index] do
+    get 'score', on: :member
+  end
   resources :playlists do
     resources :bookmarks, only: %i[new create]
   end
@@ -9,5 +12,4 @@ Rails.application.routes.draw do
 
   get 'random', to: 'songs#random', as: :random
   get ':slug', to: 'pages#show', as: 'pages'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
