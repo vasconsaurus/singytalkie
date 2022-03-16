@@ -1,10 +1,15 @@
-<div class="page-wrap-score">
+<div class="page-wrap-score" data-controller="score">
   <div class="align-cards">
     <div class = "card rating"> SCORE
       <div class="card-body score">
-        <%= @final_rating %>
+        <span data-score-target="rating" data-value=<%= @final_rating %>>
+          <%= @final_rating %>
+        </span>
         <div class="phrase">
-        Congrats! You rocked!
+          <div class="title">
+              <span class="block"></span>
+              <h3>Congrats! You rocked!</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -14,7 +19,7 @@
       <div class="card-body time">
         <p></p>
         <p class="acertos"> CORRECT ANSWERS: X/X </p>
-        <p class="acertos"> TIME: 0'0'' </p>
+        <p class="acertos"> TIME: 0'00'' </p>
       </div>
     </div>
   </div>
