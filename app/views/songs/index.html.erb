@@ -13,11 +13,12 @@
                      class: "form-control",
                      placeholder: 'Type a song title',
                      value: params[:query],
-                     data: { search_songs_target: 'input' } %>
+                     data: { search_songs_target: 'input',
+                             action: 'keyup->search-movies#update' } %>
                       <% end %>
 </div>
 
-  <section class="card-container" data-search-movies-target="card-container">
+  <section class="card-container" data-search-movies-target="list">
     <% @songs.each do |song| %>
       <div class="song-cards">
         <div class="song-cards-header">
