@@ -1,7 +1,32 @@
-<div class="page-wrap">
+<div class="page-wrap-score">
+  <div class="align-cards">
+    <div class = "card rating"> SCORE
+      <div class="card-body score">
+        <%= @final_rating %>
+        <div class="phrase">
+        Congrats! You rocked!
+        </div>
+      </div>
+    </div>
+
+
+    <div class = "card stats"> STATS
+      <div class="card-body time">
+        <p></p>
+        <p class="acertos"> CORRECT ANSWERS: X/X </p>
+        <p class="acertos"> TIME: 0'0'' </p>
+      </div>
+    </div>
+  </div>
+    <div class = "card gabarito">
+        WORDS
+    </div>
+</div>
+
+
+
   <div class="row">
     <div class="column">
-      <iframe class="video-show" width="560" height="315" src="<%= @song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="song-header">
         <h2><%= @song.title.upcase %></h2>
         <h4><%= @song.artist.upcase %></h4>
@@ -9,6 +34,10 @@
       </div>
     </div>
   </div>
+
+
+
+
 
   <div class="row mb-5">
     <div class="col-12 col-md-6">
@@ -22,18 +51,4 @@
       </div>
     </div>
   </div>
-  <div class="row mb-5">
-  <div class="col-12 col-md-6">
-     <div class="card border-secondary mb-3">
-        <div class="card-header bg-transparent border-secondary pt-3">
-          <h5 class = card-title> RATING! </h5>
-        </div>
-        <div class="card-body bg-transparent bg-opacity-50">
-          <%= @final_rating %>
-          </div>
-      </div>
-    </div>
-  </div>
   <%= link_to "Back", songs_path, class: "button button-back button-a" %>
-</div>
-
