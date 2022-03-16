@@ -9,7 +9,7 @@ class Song < ApplicationRecord
   validates :translation, presence: true
 
   def complete_song(level)
-    sentences = lyrics.split("\n")
+    sentences = lyrics.strip.split("\n")
     split_sentences = sentences.map(&:split)
     selected_words = []
     LEVELS[level].times do
