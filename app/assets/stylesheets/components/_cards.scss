@@ -1,0 +1,44 @@
+// cards song index
+
+.cards-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 6rem;
+}
+
+.song-cards {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.song-cards:hover{
+  border: 2px solid $blue-md;
+}
+
+.song-cards-header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.song-cards-info {
+  margin-bottom: 3rem;
+}
+
+.song-cards-video {
+  padding-bottom: 2rem;
+}
+
+// cards song show

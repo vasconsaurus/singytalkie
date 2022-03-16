@@ -1,6 +1,4 @@
 <div class="page-wrap">
-  <div class="row">
-    <div class="column">
       <div class="video-container">
         <iframe class="video-show" width="560" height="315" src="<%= @song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -9,37 +7,25 @@
         <h4><%= @song.artist.upcase %></h4>
         <p><%= @song.genre %></p>
       </div>
-    </div>
-  </div>
 
-  <div class="row mb-5">
-    <div class="col-12 col-md-6">
-     <div class="card border-secondary mb-3">
-        <div class="card-header bg-transparent border-secondary pt-3">
-          <h5 class = card-title> LYRICS </h5>
-        </div>
-        <div class="card-body bg-transparent bg-opacity-50">
-            <%= form_with url: score_song_path(@song), method: :get do |form|  %>
-            <%= @song.complete_song(:beginner) %>
-            <%= form.submit "Submit!", class: "button button-submit" %>
-          <% end %>
-        </div>
+  <section class="card-container">
+    <div class="song-cards">
+      <h5 class = "card-title"> LYRICS </h5>
+      <div>
+      <%= form_with url: score_song_path(@song), method: :get do |form|  %>
+        <%= @song.complete_song(:beginner) %>
+        <%= form.submit "Submit!", class: "button button-submit" %>
+      <% end %>
       </div>
     </div>
-  </div>
+
+    <div class="song-cards">
+      <h5 class = "card-title"> TRANSLATION </h5>
+      <div>
+        <%= @song.translation %>
+      </div>
+    </div>
+  </section>
 
 <%= link_to "Back", :back, class: "button button-back button-a" %>
-
-
-<%# ------------ TRANSLATION ------------ %>
-
-<%# <div class="col-12 col-md-6">
-  <div class="card border-secondary mb-3 position-behind">
-    <div class="card-header bg-transparent border-secondary pt-3">
-      <h5> TRANSLATION </h5>
-    </div>
-    <div class="card-body bg-transparent bg-opacity-50">
-      <p class="mb-1"><%= @song.translation ></p>
-    </div>
-  </div>
-</div> %>
+</div>
