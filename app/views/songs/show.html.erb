@@ -1,4 +1,4 @@
-<div class="page-wrap">
+<div class="cards-wrap">
       <div class="video-container">
         <iframe class="video-show" width="560" height="315" src="<%= @song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -8,19 +8,21 @@
         <p><%= @song.genre %></p>
       </div>
 
-  <section class="card-container">
+  <section class="card-container-lyrics">
     <div class="song-cards">
-      <h5 class = "card-title"> LYRICS </h5>
+      <h5 class = "song-card-title"> LYRICS </h5>
       <div>
       <%= form_with url: score_song_path(@song), method: :get do |form|  %>
         <%= @song.complete_song(:beginner) %>
-        <%= form.submit "Submit!", class: "button button-submit" %>
+        <div class="words-submit">
+          <%= form.submit "Submit!", class: "button button-submit button-a" %>
+        </div>
       <% end %>
       </div>
     </div>
 
     <div class="song-cards">
-      <h5 class = "card-title"> TRANSLATION </h5>
+      <h5 class = "song-card-title"> TRANSLATION </h5>
       <div>
         <%= @song.translation %>
       </div>

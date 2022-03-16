@@ -1,18 +1,29 @@
-// cards song index
-
+// applies to both index and show
 .cards-wrap {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  padding: 10%;
 }
 
+// cards-container for song index
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 6rem;
+  padding: 10%;
 }
 
+// cards-container for song show
+.card-container-lyrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 6rem;
+}
+
+// applies to both index and show
 .song-cards {
   padding: 2rem;
   display: flex;
@@ -26,6 +37,9 @@
 .song-cards:hover{
   border: 2px solid $blue-md;
 }
+
+
+// songs index specific
 
 .song-cards-header {
   display: flex;
@@ -41,4 +55,44 @@
   padding-bottom: 2rem;
 }
 
-// cards song show
+
+// songs show specific
+
+.song-card-title {
+  margin-bottom: 4rem;
+}
+
+.words-submit {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.word-input {
+  border: none;
+  background-color: $green-light;
+  height: 1.25rem;
+}
+
+
+// media queries
+
+@media(max-width: 992px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-container-lyrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container-lyrics {
+    grid-template-columns: 1fr;
+  }
+}
