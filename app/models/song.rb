@@ -23,7 +23,7 @@ class Song < ApplicationRecord
         word = split_sentences[sentence_index][word_index]
       end
       selected_words << word
-      split_sentences[sentence_index][word_index] = "<input name='word[#{word}]' type='text' class='word-input'>"
+      split_sentences[sentence_index][word_index] = "<input name=\'word[#{word}]\' type='text' class='word-input'>"
     end
     split_sentences.map { |sentence| sentence.join(" ") }.join("\n").html_safe
   end

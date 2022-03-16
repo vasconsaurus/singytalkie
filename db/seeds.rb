@@ -167,37 +167,37 @@ lyrics02 = Song.create(song_link: "https://www.youtube.com/embed/KxZedRh_7x8",
 
 lyrics03 = Song.create(song_link: "https://www.youtube.com/embed/ODIvONHPqpk",
                         lyrics: "Free as a bird
-                        It's the next best thing to be
-                        Free as a bird
-                        Home, home and dry
-                        Like a hummingbird I fly
-                        As a bird on wings
+                        It's the next best thing to be\n
+                        Free as a bird\n
+                        Home, home and dry\n
+                        Like a hummingbird I fly\n
+                        As a bird on wings\n
 
-                        What ever happened to
-                        Life that we once knew?
-                        Can we really live without each other?
+                        What ever happened to\n
+                        Life that we once knew?\n
+                        Can we really live without each other?\n
 
-                        Where did we lose the touch
-                        That seemed to mean so much?
-                        It always made me feel so
-                        Free as a bird
-                        It's the next best thing to be
+                        Where did we lose the touch\n
+                        That seemed to mean so much?\n
+                        It always made me feel so\n
+                        Free as a bird\n
+                        It's the next best thing to be\n
 
-                        Free as a bird
-                        Home, home and dry
-                        Like a hummingbird I fly
-                        As a bird on wings
+                        Free as a bird\n
+                        Home, home and dry\n
+                        Like a hummingbird I fly\n
+                        As a bird on wings\n
 
-                        What ever happened to
-                        The life that we once knew?
-                        Always made me feel so free
+                        What ever happened to\n
+                        The life that we once knew?\n
+                        Always made me feel so free\n
 
-                        Free as a bird
-                        It's the next best thing to be
+                        Free as a bird\n
+                        It's the next best thing to be\n
 
-                        Free as a bird
-                        Free as a bird
-                        Free as a bird
+                        Free as a bird\n
+                        Free as a bird\n
+                        Free as a bird\n
 
                         Free",
 
