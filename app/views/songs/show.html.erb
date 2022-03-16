@@ -21,11 +21,11 @@
       </div>
     </div>
 
-    <div class="song-cards">
+    <div class="song-cards songs-cards-translation">
       <h5 class = "song-card-title"> TRANSLATION </h5>
       <div>
         <% translation = @song.translation %>
-        <%= translation_with_breaks(translation) %>
+        <%= line_breaker(translation) %>
       </div>
     </div>
   </section>
