@@ -1,0 +1,66 @@
+<div class="page-wrap score-bg" data-controller="score">
+  <div class="align-cards">
+    <div class = "card rating"> SCORE
+      <div class="card-body score">
+        <span data-score-target="rating" data-value=<%= @final_rating %>>
+          <%= @final_rating %>
+        </span>
+        <div class="phrase">
+          <div class="title">
+              <span class="block"></span>
+
+              <h3>Congrats! You rocked!</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class = "card stats"> STATS
+      <div class="card-body time">
+        <p></p>
+        <p class="acertos"> CORRECT ANSWERS: X/X </p>
+        <p class="acertos"> TIME: 0'00'' </p>
+      </div>
+    </div>
+  </div>
+    <div class = "card gabarito">
+        WORDS
+        <div class="gabarito-p">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ab nobis officiis eius, debitis error est non molestiae perspiciatis neque voluptatum minima at, adipisci rem iusto reiciendis vero odio quae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sunt placeat obcaecati ad consequuntur facilis est porro tempore maxime voluptatum? Omnis veniam, suscipit quisquam laboriosam dolor dignissimos saepe deserunt voluptatum.</p>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="row">
+    <div class="column">
+      <div class="song-header">
+        <h2><%= @song.title.upcase %></h2>
+        <h4><%= @song.artist.upcase %></h4>
+        <p><%= @song.genre %></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-6">
+     <div class="card border-secondary mb-3">
+        <div class="card-header bg-transparent border-secondary pt-3">
+          <h5 class = card-title> LYRICS </h5>
+        </div>
+        <div class="card-body bg-transparent bg-opacity-50">
+          <%= @song.lyrics  %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= link_to "Back", songs_path, class: "button button-back button-a" %>
+
+
