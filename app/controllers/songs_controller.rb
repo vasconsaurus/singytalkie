@@ -14,13 +14,15 @@ class SongsController < ApplicationController
   end
 
   def show
+    @level = params[:level]
   end
 
   def score
-    rating = 0
+    @level = params[:level]
+    @rating = 0
     @words = params.to_unsafe_h[:word]
-    @words.each { |key, value| rating += 1 if key == value }
-    @final_rating = rating * 10
+    @words.each { |key, value| @rating += 1 if key == value }
+    @final_rating = @rating * 100 / Song::LEVELS[@level]
   end
 
   def random

@@ -13,8 +13,9 @@
       <h5 class = "song-card-title"> LYRICS </h5>
       <div>
       <%= form_with url: score_song_path(@song), method: :get do |form|  %>
-        <%= @song.complete_song(:beginner) %>
+        <%= @song.complete_song(@level) %>
         <div class="words-submit">
+          <%= form.hidden_field :level, value: @level %>
           <%= form.submit "Submit!", class: "button button-submit button-a" %>
         </div>
       <% end %>
