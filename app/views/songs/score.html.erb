@@ -18,17 +18,24 @@
     <div class = "card stats"> STATS
       <div class="card-body time">
         <p></p>
-        <p class="acertos"> CORRECT ANSWERS: X/X </p>
-        <p class="acertos"> TIME: 0'00'' </p>
+        <p class="acertos"> CORRECT ANSWERS: <%= "#{@rating}/#{Song::LEVELS[@level]}"  %></p>
       </div>
     </div>
   </div>
-    <div class = "card gabarito">
-        WORDS
-    </div>
 </div>
 
 
+<div class = "card gabarito">
+  WORDS
+  <% @words.each do |answer, input| %>
+  <% if answer == input %>
+     <p>Correct: <%= answer %> Your Input: <%= input %></p> <%# INSERIR CLASSE DE ACERTO%>
+     <% else %>
+     <p>Correct: <%= answer %> Your Input: <%= input %></p> <%# INSERIR CLASSE DE ERRO%>
+     <% end %>
+  <%end %>
+
+</div>
 
   <div class="row">
     <div class="column">
