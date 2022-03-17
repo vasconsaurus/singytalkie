@@ -1,23 +1,29 @@
-.page-wrap-score{
-  height:100vh;
+// .page-wrap-score{
+//   height:150vh;
+//   background-color: $blue-md;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   padding: 50px;
+//   margin-top: 10px;
+// }
+
+.score-bg{
   background-color: $blue-md;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 50px;
-  margin-top: 10px;
+  height: 100vh;
 }
 
 .align-cards{
 display: flex;
 gap: 50px;
+
 }
 
 .rating{
   font-size: 3rem;
   font-weight: bolder;
-  width: 500px;
+  width: 100%;
   align-items: center;
   background-color: $green-md;
   color: $gray-md;
@@ -29,7 +35,7 @@ gap: 50px;
   align-items: center;
   color: $blue-md;
   font-weight: bolder;
-
+  text-align: center;
 }
 
 .phrase{
@@ -58,7 +64,7 @@ gap: 50px;
       z-index: 1;
     }
 
-    h3 {
+    p {
       -webkit-animation: mainFadeIn 0.5s forwards;
       -o-animation: mainFadeIn 0.5s forwards;
       animation: mainFadeIn 0s forwards;
@@ -94,7 +100,7 @@ gap: 50px;
 .stats{
   font-size: 3rem;
   font-weight: bolder;
-  width: 500px;
+  width: 100%;
   align-items: center;
   background-color: $green-md;
   color: $gray-md;
@@ -105,19 +111,25 @@ gap: 50px;
   font-size: 2rem;
   font-weight: bolder;
   color: $blue-md;
-  height: 40%;
 }
 
 .gabarito{
   font-size: 3rem;
-  width: 500px;
+  width: 60%;
   font-weight: bolder;
   align-items: center;
   background-color: $green-md;
   color: $orange-md;
   margin: 50px auto 0;
   border-radius: 2px;
+
+  .gabarito-p{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
 }
+
 
 @keyframes mainBlock {
   0% {
@@ -199,6 +211,12 @@ gap: 50px;
   }
 }
 
+.time{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 // @keyframes secFadeIn {
 //   0% {
 //     opacity: 0;
@@ -207,3 +225,13 @@ gap: 50px;
 //     opacity: 0.5;
 //   }
 // }
+
+@media (max-width: 600px) {
+  .align-cards{
+    flex-direction: column;
+  }
+
+  .gabarito{
+    width:100%;
+  }
+}
