@@ -1,33 +1,47 @@
-<div class="page-wrap-score" data-controller="score">
+<div class="page-wrap score-bg" data-controller="score">
+
   <div class="align-cards">
     <div class = "card rating"> SCORE
-      <div class="card-body score">
-        <span data-score-target="rating" data-value=<%= @final_rating %>>
+        <div class="card-body score">
+          <span data-score-target="rating" data-value=<%= @final_rating %>>
           <%= @final_rating %>
         </span>
-        <div class="phrase">
-          <div class="title">
-              <span class="block"></span>
-              <h3>Congrats! You rocked!</h3>
-          </div>
+            <div class="phrase">
+              <div class="title">
+                <span class="block"></span>
+        <% case @final_rating
+        when 0 %>
+           <h3> Dont panic. We gotta start somewhere. </h3>
+        <% when 10..25 %>
+           <h3> "Listen to the song a few more times." </h3>
+        <%when 26..50 %>
+           <h3> "I know you can do better!" </h3>
+        <%when 51..75 %>
+           <h3> "Good job. You almost made it!"</h3>
+        <%else%>
+           <h3> "You are a song master."</h3>
+        <% end %>
+              </div>
+            </div>
         </div>
-      </div>
     </div>
-
 
     <div class = "card stats"> STATS
       <div class="card-body time">
         <p></p>
         <p class="acertos"> CORRECT ANSWERS: X/X </p>
-        <p class="acertos"> TIME: 0'00'' </p>
       </div>
     </div>
   </div>
-    <div class = "card gabarito">
-        WORDS
-    </div>
-</div>
 
+    <div class = "card gabarito"> WORDS
+      <div class="gabarito-p">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ab nobis officiis eius, debitis error est non molestiae perspiciatis neque voluptatum minima at, adipisci rem iusto reiciendis vero odio quae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sunt placeat obcaecati ad consequuntur facilis est porro tempore maxime voluptatum? Omnis veniam, suscipit quisquam laboriosam dolor dignissimos saepe deserunt voluptatum.</p>
+      </div>
+    </div>
+
+</div>
 
 
   <div class="row">
@@ -40,11 +54,7 @@
     </div>
   </div>
 
-
-
-
-
-  <div class="row mb-5">
+<div class="row mb-5">
     <div class="col-12 col-md-6">
      <div class="card border-secondary mb-3">
         <div class="card-header bg-transparent border-secondary pt-3">
