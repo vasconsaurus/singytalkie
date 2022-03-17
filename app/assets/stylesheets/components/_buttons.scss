@@ -1,3 +1,4 @@
+// round corners and sets our buttons general appearence
 .button {
   border-radius: 30px;
   padding: 0.75rem 1rem;
@@ -13,6 +14,7 @@
   }
 }
 
+// this button-a was made because our classes where not working with a in simple form buttons
 .button-a {
   text-decoration: none;
 }
@@ -25,6 +27,7 @@ a.btn:hover a.button:hover{
   color: white;
 }
 
+// the nesting was working but seems to not work with a in simple form buttons
 .button-login {
   border: 2px solid $green-md;
   color: $green-md;
