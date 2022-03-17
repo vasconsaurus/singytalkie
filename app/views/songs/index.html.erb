@@ -9,26 +9,6 @@
   </section>
 </div>
 
-
-  <section class="card-container">
-    <% @songs.each do |song| %>
-      <div class="song-cards">
-        <div class="song-cards-header">
-          <iframe class="song-cards-video" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          <div class="song-cards-info">
-            <p class="genre-txt"><%= song.genre %></p>
-            <h2 class="txt-blue-md"><%= song.title.upcase %></h2>
-            <h4 class="txt-blue-md"><%= song.artist.upcase %></h4>
-            <p><%= song.genre %></p>
-            <div class="d-flex flex-column">
-              <%= link_to 'Beginner ★☆☆', song_path(song, level: "beginner"), class: "button button-submit" %>
-              <%= link_to 'Intermediate ★★☆', song_path(song, level: "intermediate"), class: "button button-submit" %>
-              <%= link_to 'Advanced ★★★', song_path(song, level: "advanced"), class: "button button-submit" %>
-            </div>
-          </div>
-        </div>
-        </div>
-
 <div class="cards-wrap">
   <div data-controller="search-songs" class='cards-wrap'>
     <%= form_with url: songs_path, method: :get, html: { class:
