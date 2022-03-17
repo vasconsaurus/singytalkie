@@ -1,5 +1,5 @@
 .random {
-  margin: 4rem 0 6rem 0;
+  margin-bottom: 4rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -29,5 +29,9 @@
   padding: 0.15rem 0.5rem;
   color: white;
   margin-bottom: 0.5rem;
+}
 
+.song-search-bar {
+  width: 50vw;
+  border: 2px solid $orange-md;
 }
