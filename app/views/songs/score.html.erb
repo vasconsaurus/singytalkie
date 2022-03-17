@@ -1,25 +1,29 @@
-<div class="page-wrap-score" data-controller="score">
+<div class="page-wrap score-bg" data-controller="score">
+
   <div class="align-cards">
     <div class = "card rating"> SCORE
-      <div class="card-body score">
-        <span data-score-target="rating" data-value=<%= @final_rating %>>
+        <div class="card-body score">
+          <span data-score-target="rating" data-value=<%= @final_rating %>>
           <%= @final_rating %>
         </span>
-        <div class="phrase">
-          <div class="title">
-              <span class="block"></span>
-              <h3>Congrats! You rocked!</h3>
-          </div>
+            <div class="phrase">
+              <div class="title">
+                <span class="block"></span>
+        <% case @final_rating
+        when 0..9 %>
+           <h3> Don't panic... We're just getting started! </h3>
+        <% when 10..25 %>
+           <h3> "You'll do better next time. Let's try again." </h3>
+        <% when 26..50 %>
+           <h3> "Good job! You are getting better! Don't give up!" </h3>
+        <% when 51..75 %>
+           <h3> "Awesome! You almost made it!"</h3>
+        <% else %>
+           <h3> "CONGRATULATIONS! YOU ROCK!"</h3>
+        <% end %>
+              </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-
-    <div class = "card stats"> STATS
-      <div class="card-body time">
-        <p></p>
-        <p class="acertos"> CORRECT ANSWERS: <%= "#{@rating}/#{Song::LEVELS[@level]}"  %></p>
-      </div>
     </div>
   </div>
 </div>
@@ -34,7 +38,6 @@
      <p>Correct: <%= answer %> Your Input: <%= input %></p> <%# INSERIR CLASSE DE ERRO%>
      <% end %>
   <%end %>
-
 </div>
 
   <div class="row">
@@ -43,12 +46,10 @@
         <h2><%= @song.title.upcase %></h2>
         <h4><%= @song.artist.upcase %></h4>
         <p><%= @song.genre %></p>
+        <p class="acertos"> CORRECT ANSWERS: <%= "#{@rating}/#{Song::LEVELS[@level]}"  %> </p>
       </div>
     </div>
   </div>
-
-
-
 
 
   <div class="row mb-5">
@@ -64,3 +65,5 @@
     </div>
   </div>
   <%= link_to "Back", songs_path, class: "button button-back button-a" %>
+
+
