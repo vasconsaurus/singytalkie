@@ -1,14 +1,13 @@
 
-  <div class="banner-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1557787163-1635e2efb160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80);">
-    <h1 class="txt-blue-md banner-small-top">PICK A SONG! START LEARNING!</h1>
+<div class="banner-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1522863602463-afebb8886ab2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tYW4lMjBzaW5nfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60);">
+  <h1 class="txt-blue-md banner-small-top">PICK A SONG! START LEARNING!</h1>
 
-    <section class="random">
-      <h4><%= "Don't know what to listen to to?".upcase%></h4>
-      <div class="button button-submit">
-        <%= link_to 'Pick a song for me!', random_path %>
-      </div>
-    </section>
-  </div>
+  <section class="random">
+    <div class="button button-submit">
+      <%= link_to 'Pick a song for me!', random_path %>
+    </div>
+  </section>
+</div>
 
 <div class="cards-wrap">
   <div data-controller="search-songs" class='cards-wrap'>
