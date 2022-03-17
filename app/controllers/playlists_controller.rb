@@ -5,8 +5,21 @@ class PlaylistsController < ApplicationController
     @playlists = Playlist.all
   end
 
+  def edit
+    @playlist.edit
+    redirect_to playlist_path(@playlist)
+  end
+
+  def update
+    if @playlist.update(playlist_params)
+      redirect_to @playlist, notice: 'playlist was successfully updated.'
+    else
+      render :edit
+    end
+  end
   def show
     @bookmark = Bookmark.new
+    @songs = Song.where.not(id: @playlist.songs).order(:title, :artist)
   end
 
   def new

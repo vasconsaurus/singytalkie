@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show, :score]
+  before_action :set_song, only: %i[show score]
   def index
     @songs = Song.all
   end

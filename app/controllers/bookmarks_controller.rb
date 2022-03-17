@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
-  before_action :set_bookmark, only: :destroy
+  before_action :set_bookmark, only: %i[edit destroy]
   before_action :set_playlist, only: %i[new create]
 
   def create
@@ -10,6 +10,19 @@ class BookmarksController < ApplicationController
       redirect_to playlist_path(@playlist)
     else
       render "playlists/show"
+    end
+  end
+
+  def edit
+    @bookmark.edit
+    redirect_to playlist_path(@bookmark.playlist)
+  end
+
+  def update
+    if @bookmark.update(bookmark_params)
+      redirect_to @bookmark, notice: 'bookmark was successfully updated.'
+    else
+      render :edit
     end
   end
 
