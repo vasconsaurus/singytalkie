@@ -1,7 +1,16 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :score]
   def index
-    @songs = Song.all
+    if params[:query].present?
+      @songs = Song.where('title ILIKE :query OR artist ILIKE :query OR genre ILIKE :query', query: "%#{params[:query]}%")
+    else
+      @songs = Song.all
+    end
+
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'songs/list', locals: { songs: @songs }, formats: [:html] }
+    end
   end
 
   def show
