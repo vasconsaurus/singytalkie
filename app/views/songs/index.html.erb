@@ -1,24 +1,26 @@
-<div class="page-wrap cards-wrap">
-  <h1 class="txt-blue-md">PICK A SONG! START LEARNING!</h1>
+
+<div class="banner-small" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1522863602463-afebb8886ab2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tYW4lMjBzaW5nfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60);">
+  <h1 class="txt-blue-md banner-small-top">PICK A SONG! START LEARNING!</h1>
 
   <section class="random">
-    <h4><%= "Don't know what to listen to to?".upcase%></h4>
-    <div class="button button-submit"> <%= link_to 'Pick a song for me!', random_path %></div>
+    <div class="button button-submit">
+      <%= link_to 'Pick a song for me!', random_path %>
+    </div>
   </section>
+</div>
 
-  <section class="card-container">
-    <% @songs.each do |song| %>
-      <div class="song-cards">
-        <div class="song-cards-header">
-          <iframe class="song-cards-video" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          <div class="song-cards-info">
-            <p class="genre-txt"><%= song.genre %></p>
-            <h2 class="txt-blue-md"><%= song.title.upcase %></h2>
-            <h4 class="txt-blue-md"><%= song.artist.upcase %></h4>
-          </div>
-        </div>
-        <div class="button button-submit"> <%= link_to 'Learn this song!', song_path(song) %></div>
-        </div>
+<div class="cards-wrap">
+  <div data-controller="search-songs" class='cards-wrap'>
+    <%= form_with url: songs_path, method: :get, html: { class:
+      'mb-4', data: { search_songs_target: 'form' } } do |f| %>
+      <%= f.text_field :query,
+                      class: "form-control song-search-bar",
+                      placeholder: 'Search a song!',
+                      value: params[:query],
+                      data: { search_songs_target: 'input',
+                              action: 'keyup->search-songs#update' } %>
     <% end %>
-  </section>
+
+    <%= render "list", songs: @songs %>
+  </div>
 </div>
