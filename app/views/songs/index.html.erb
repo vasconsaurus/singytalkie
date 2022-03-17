@@ -19,8 +19,6 @@
                               action: 'keyup->search-songs#update' } %>
     <% end %>
 
-    <section class="card-container"  data-search-songs-target="list">
-      <% render "list", songs:@songs %>
-    </section>
+    <% render "list", songs:@songs %>
   </div>
 </div>
