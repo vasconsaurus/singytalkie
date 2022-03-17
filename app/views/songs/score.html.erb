@@ -9,17 +9,17 @@
             <div class="phrase">
               <div class="title">
                 <span class="block"></span>
-        <% case 0
-        when @final_rating >= 0 %>
-           <p> "Dont panic. We gotta start somewhere." </p>
-        <% when @final_rating >= 25 %>
-           <p> "Listen to the song a few more times." </p>
-        <%when @final_rating >= 50 %>
-           <p> "I know you can do better!" </p>
-        <%when @final_rating >= 75 %>
-           <p> "Good job. You almost made it!"</p>
-        <%when @final_rating = 100 %>
-           <p> "You are a song master."</p>
+        <% case @final_rating
+        when 0 %>
+           <h3> Dont panic. We gotta start somewhere. </h3>
+        <% when 10..25 %>
+           <h3> "Listen to the song a few more times." </h3>
+        <%when 26..50 %>
+           <h3> "I know you can do better!" </h3>
+        <%when 51..75 %>
+           <h3> "Good job. You almost made it!"</h3>
+        <%else%>
+           <h3> "You are a song master."</h3>
         <% end %>
               </div>
             </div>
@@ -30,7 +30,6 @@
       <div class="card-body time">
         <p></p>
         <p class="acertos"> CORRECT ANSWERS: X/X </p>
-        <p class="acertos"> TIME: 0'00'' </p>
       </div>
     </div>
   </div>
