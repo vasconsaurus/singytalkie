@@ -13,6 +13,8 @@
 
 body {
   position: relative;
+
+
 }
 
 .page-wrap {
@@ -21,4 +23,14 @@ body {
   flex-flow: column nowrap;
   height: 100%;
   position: relative;
+
+}
+
+
+.score-bg::-webkit-scrollbar {
+  //  width:0 !important;
+  // display: none;
+  background-color: $blue-md;
+  color: $blue-md;
+  background: $blue-md;
 }
