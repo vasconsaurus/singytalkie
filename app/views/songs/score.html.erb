@@ -33,7 +33,7 @@
       <ol>
         <% @words.each do |answer, input| %>
         <% if answer == input %>
-          <li class="answers">Correct: <%= answer %> • Your Input: <%= input %></li> <%# INSERIR CLASSE DE ACERTO%>
+          <li class="answers">Correct: <%= answer %> • Your Input: <span class='right-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ACERTO%>
           <% else %>
           <li class="answers">Correct: <%= answer %> • Your Input: <span class='wrong-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ERRO%>
           <% end %>
@@ -58,5 +58,5 @@
     </div>
   </div>
 
-  <%= link_to "Back", songs_path, class: "button button-submit button-a" %>
+  <%= link_to "Back", songs_path, class: "button button-submit button-a button-score" %>
 </div>
