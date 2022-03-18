@@ -59,6 +59,15 @@ a.btn:hover a.button:hover{
   color: white;
 }
 
+//button a for orange solid button
+.button-a-solid {
+  text-decoration: none;
+}
+
+.button-a-solid:hover{
+  color: $orange-md;
+}
+
 // the nesting was working but seems to not work with a in simple form buttons
 .orange-button {
   border: 2px solid $orange-md;
@@ -121,5 +130,27 @@ a.btn:hover a.button:hover{
 
   &:hover a {
     color: white;
+  }
+}
+
+.orange-solid-button{
+  border: 2px solid $orange-md;
+  color: white;
+  background-color: $orange-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+
+  a {
+    color: $orange-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: transparent;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: $orange-md;
   }
 }

@@ -1,5 +1,5 @@
 <section class="card-container"  data-search-songs-target="list">
-    <% @songs.each do |song| %>
+    <% songs.each do |song| %>
       <div class="song-cards song-cards-space">
         <div class="song-cards-header">
 
@@ -12,10 +12,17 @@
           </div>
         </div>
 
+        <div class="buttons-container">
         <!-- Button trigger modal -->
         <button type="button" class="button orange-button button-a bck-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Learn this song!
         </button>
+
+        <% can_delete = can_delete || nil %>
+        <% if can_delete %>
+          <%= link_to "Delete Song", bookmark_path(@playlist.bookmarks.find_by(song_id: song.id)), method: 'DELETE', data: { confirm: 'Are you sure?' }, class: "button orange-solid-button button-a-solid" %>
+        <% end %>
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
