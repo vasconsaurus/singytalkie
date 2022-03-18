@@ -10,37 +10,64 @@
               <div class="title">
                 <span class="block"></span>
         <% case @final_rating
-        when 0 %>
-           <h3> Dont panic. We gotta start somewhere. </h3>
+        when 0..9 %>
+           <h3> Don't panic... We're just getting started! </h3>
         <% when 10..25 %>
-           <h3> "Listen to the song a few more times." </h3>
-        <%when 26..50 %>
-           <h3> "I know you can do better!" </h3>
-        <%when 51..75 %>
-           <h3> "Good job. You almost made it!"</h3>
-        <%else%>
-           <h3> "You are a song master."</h3>
+           <h3> "You'll do better next time. Let's try again." </h3>
+        <% when 26..50 %>
+           <h3> "Good job! You are getting better! Don't give up!" </h3>
+        <% when 51..75 %>
+           <h3> "Awesome! You almost made it!"</h3>
+        <% else %>
+           <h3> "CONGRATULATIONS! YOU ROCK!"</h3>
         <% end %>
               </div>
             </div>
         </div>
     </div>
+  </div>
+</div>
 
-    <div class = "card stats"> STATS
-      <div class="card-body time">
-        <p></p>
-        <p class="acertos"> CORRECT ANSWERS: X/X </p>
+
+<div class = "card gabarito">
+  WORDS
+  <% @words.each do |answer, input| %>
+  <% if answer == input %>
+     <p>Correct: <%= answer %> Your Input: <%= input %></p> <%# INSERIR CLASSE DE ACERTO%>
+     <% else %>
+     <p>Correct: <%= answer %> Your Input: <%= input %></p> <%# INSERIR CLASSE DE ERRO%>
+     <% end %>
+  <%end %>
+</div>
+
+  <div class="row">
+    <div class="column">
+      <div class="song-header">
+        <h2><%= @song.title.upcase %></h2>
+        <h4><%= @song.artist.upcase %></h4>
+        <p><%= @song.genre %></p>
+        <p class="acertos"> CORRECT ANSWERS: <%= "#{@rating}/#{Song::LEVELS[@level]}"  %> </p>
       </div>
     </div>
   </div>
 
-    <div class = "card gabarito"> WORDS
-      <div class="gabarito-p">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ab nobis officiis eius, debitis error est non molestiae perspiciatis neque voluptatum minima at, adipisci rem iusto reiciendis vero odio quae?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sunt placeat obcaecati ad consequuntur facilis est porro tempore maxime voluptatum? Omnis veniam, suscipit quisquam laboriosam dolor dignissimos saepe deserunt voluptatum.</p>
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-6">
+     <div class="card border-secondary mb-3">
+        <div class="card-header bg-transparent border-secondary pt-3">
+          <h5 class = card-title> LYRICS </h5>
+        </div>
+        <div class="card-body bg-transparent bg-opacity-50">
+          <%= @song.lyrics %>
+        </div>
       </div>
     </div>
+  </div>
+  <%= link_to "Back", songs_path, class: "button button-back button-a" %>
 
+
+<<<<<<< HEAD
 </div>
 <<<<<<< HEAD
 
@@ -70,3 +97,5 @@
   <%= link_to "Back", songs_path, class: "button button-back button-a" %>
 =======
 >>>>>>> ca86fa6d5d91618e1e1432dc0a98353bec912e89
+=======
+>>>>>>> 65c82dd36a21a1eb36f1e55afd489d587bcdc4ad

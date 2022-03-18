@@ -1,26 +1,5 @@
-
-
-<section class="navbar-container">
-  <div class="navbar-right">
-    <div class="checkbox-container">
-      <input class="checkbox-trigger" type="checkbox"  />
-      <div class="menu-content">
-          <ul>
-            <li class="first-li"><%= link_to "Pick a song", songs_path, method: :get %></li>
-            <% if user_signed_in? %>
-              <li><%= link_to "Edit Profile", edit_user_registration_path, method: :get %></li>
-              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-            <% else %>
-              <li><%= link_to "Login", new_user_session_path %></li>
-            <% end %>
-          </ul>
-          <div class="menu-style">
-            <div class="hamburger-menu"></div>
-          </div>
-      </div>
-    </div>
-    <h1 class="logo-nav"> <%= link_to "SINGYTALKIE", root_path, method: :get %></h1>
-  </div>
+<section class="my-navbar">
+  <h1 class="logo-nav"> <%= link_to "SINGYTALKIE", root_path, method: :get %></h1>
   <% if user_signed_in? %>
     <div class="avatar-square">
         <% if current_user and current_user.photo.attached? %>
@@ -30,4 +9,39 @@
         <% end %>
     </div>
   <% end %>
- </section>
+</section>
+
+
+<div class="wrapper">
+  <input type="checkbox" id="navigation" />
+  <label for="navigation" class="nav-label">
+      +
+  </label>
+
+  <nav>
+    <ul>
+      <li class="nav-li">
+        <%= link_to "Home", root_path, method: :get %></a>
+      </li>
+      <li class="nav-li">
+        <%= link_to "Pick a song", songs_path, method: :get %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-li">
+          <%= link_to "Edit Profile", edit_user_registration_path, method: :get %>
+        </li>
+        <li class="nav-li">
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        </li>
+      <% else %>
+        <li class="nav-li">
+          <%= link_to "Log in", new_user_session_path %>
+        </li>
+          <li class="nav-li">
+            <%= link_to "Sign up", new_user_registration_path %>
+          </li>
+      <% end %>
+      </li>
+    </ul>
+  </nav>
+</div>
