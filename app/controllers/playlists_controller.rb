@@ -1,12 +1,12 @@
 class PlaylistsController < ApplicationController
-  before_action :set_playlist, only: %i[show edit destroy]
+  before_action :set_playlist, only: %i[show edit update destroy]
 
   def index
     @playlists = Playlist.all
   end
 
   def edit
-    @songs = Song.where.not(id: @playlist.songs)
+
   end
 
   def update

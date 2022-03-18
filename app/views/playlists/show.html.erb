@@ -3,7 +3,7 @@
     <h1><%= @playlist.title.capitalize %></h1>
     <ol><% @playlist.bookmarks.each do |bookmark|%>
       <li><%= bookmark.song.title %></li>
-
+      <%= link_to "Delete", playlist_path(:song_id), method: 'DELETE', class: "button button-back button-a" %>
     <%end %>
     </ol>
   </div>
