@@ -22,9 +22,7 @@
         <%= @song.complete_song(@level) %>
         <div class="words-submit">
           <%= form.hidden_field :level, value: @level %>
-          <%= form.submit "Submit!", class: "button orange-button button-a bck-white" %>
         </div>
-      <% end %>
       </div>
     </div>
 
@@ -37,7 +35,7 @@
     </div>
   </section>
 
-      <%= form.submit "Submit!", class: "button orange-button button-a wrap-button-center bck-white" %>
-      <% end %>
-<%= link_to "Back", :back, class: "button green-button button-a wrap-button-center" %>
-</div>
+  <%= form.submit "Submit!", class: "button orange-button button-a wrap-button-center" %>
+  <% end %>
+  <%= link_to "Back", :back, class: "button green-button button-a wrap-button-center" %>
+  </div>
