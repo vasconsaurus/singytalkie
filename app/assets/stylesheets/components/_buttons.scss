@@ -14,6 +14,31 @@
   }
 }
 
+.button-small {
+  border-radius: 30px;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0;
+  width: 10rem;
+  font-size: 1rem;
+  border: 2px solid $orange-md;
+  color: $orange-md;
+  text-align: center;
+
+  a {
+    color: $orange-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $orange-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
+}
+
 // this button-a was made because our classes where not working with a in simple form buttons
 .button-a {
   text-decoration: none;
