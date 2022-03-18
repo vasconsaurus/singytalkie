@@ -1,14 +1,13 @@
-<div class="container mt-5">
-  <%= link_to 'New playlist', new_playlist_path, class: "btn btn-primary"%>
-</div>
-
-<div class="container mt-5">
-  <% @playlists.each do |playlist| %>
-    <%= link_to playlist_path(playlist) do %>
-      <div class="card-category">
-        <%= playlist.title %>
+<div class="page-wrap">
+  <ol class="playlist-list">
+    <% @playlists.each do |playlist| %>
+      <div class="playlist-list-container">
+        <li class="playlist-list"><%= playlist.title %></li>
+        <%= link_to 'go to playlist', playlist_path(playlist), class: "button-small button-a" %>
       </div>
+      <hr class="playlist-hr">
     <% end %>
-    <hr>
-  <% end %>
+  </ol>
+
+  <%= link_to 'New playlist', new_playlist_path, class: "button orange-button button-a wrap-button-center"%>
 </div>

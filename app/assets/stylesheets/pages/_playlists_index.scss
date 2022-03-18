@@ -1,0 +1,14 @@
+.playlist-list li {
+  list-style-position: inside;
+}
+
+.playlist-list-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-hr {
+  border: 2px solid $blue-md;
+}
