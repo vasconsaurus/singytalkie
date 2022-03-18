@@ -17,12 +17,14 @@
 
     <div class="song-cards">
       <h5 class = "song-card-title"> LYRICS </h5>
-      <div class= "song-cards-lyrics-submit">
-        <%= form_with url: score_song_path(@song), method: :get do |form|  %>
-          <%= @song.complete_song(@level) %>
-          <div class="words-submit">
-            <%= form.hidden_field :level, value: @level %>
-          </div>
+      <div>
+      <%= form_with url: score_song_path(@song), method: :get do |form|  %>
+        <%= @song.complete_song(@level) %>
+        <div class="words-submit">
+          <%= form.hidden_field :level, value: @level %>
+          <%= form.submit "Submit!", class: "button orange-button button-a bck-white" %>
+        </div>
+      <% end %>
       </div>
     </div>
 
