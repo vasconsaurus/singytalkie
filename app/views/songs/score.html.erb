@@ -33,9 +33,9 @@
       <ol>
         <% @words.each do |answer, input| %>
         <% if answer == input %>
-          <li class="answers">Correct: <%= answer %> • Your Input: <span class='right-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ACERTO%>
+          <li class="answers"><span class='right-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ACERTO%>
           <% else %>
-          <li class="answers">Correct: <%= answer %> • Your Input: <span class='wrong-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ERRO%>
+          <li class="answers"><span class='right-answer'><%= answer %></span> • <span class='wrong-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ERRO%>
           <% end %>
         <%end %>
       </ol>
@@ -56,6 +56,13 @@
         <%= line_breaker(translation) %>
       </div>
     </div>
+  </div>
+
+  <div class="song-cards-levels">
+    <h5><%= 'Play again?'.upcase %></h5>
+    <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button button-submit  button-a" %>
+    <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button button-submit button-a" %>
+    <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button button-submit  button-a" %>
   </div>
 
   <%= link_to "Back", songs_path, class: "button button-submit button-a button-score" %>
