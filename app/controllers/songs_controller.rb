@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show, :score]
+  before_action :set_song, only: %i[show score]
   def index
     if params[:query].present?
       @songs = Song.where('title ILIKE :query OR artist ILIKE :query OR genre ILIKE :query', query: "%#{params[:query]}%")

@@ -1,12 +1,25 @@
 class PlaylistsController < ApplicationController
-  before_action :set_playlist, only: %i[show destroy]
+  before_action :set_playlist, only: %i[show edit update destroy]
 
   def index
     @playlists = Playlist.all
   end
 
+  def edit
+
+  end
+
+  def update
+    if @playlist.update(playlist_params)
+      redirect_to @playlist, notice: 'playlist was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
   def show
     @bookmark = Bookmark.new
+    @songs = Song.where.not(id: @playlist.songs).order(:title, :artist)
   end
 
   def new

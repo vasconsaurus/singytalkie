@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :playlists do
     resources :bookmarks, only: %i[new create]
   end
-  resources :bookmarks, only: %i[update destroy]
+  resources :bookmarks, only: %i[edit update destroy]
 
   # get 'random/:id', to: 'songs#random', as: :random
   get ':slug', to: 'pages#show', as: 'pages'
