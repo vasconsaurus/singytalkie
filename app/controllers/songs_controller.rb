@@ -6,7 +6,7 @@ class SongsController < ApplicationController
     else
       @songs = Song.all
     end
-
+    @song = Song.order('RANDOM()').first
     respond_to do |format|
       format.html # Follow regular flow of Rails
       format.text { render partial: 'songs/list', locals: { songs: @songs }, formats: [:html] }
@@ -23,10 +23,11 @@ class SongsController < ApplicationController
     @final_rating = rating * 10
   end
 
-  def random
-    @song = Song.order('RANDOM()').first
-    redirect_to @song
-  end
+  # def random
+  #   # @song = Song.order('RANDOM()').first
+  #   @level = params[:level]
+  #   redirect_to @song
+  # end
 
   private
 
