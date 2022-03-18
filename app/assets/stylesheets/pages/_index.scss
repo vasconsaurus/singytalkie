@@ -1,6 +1,9 @@
 // Import page-specific CSS files here.
 @import "devise_views";
 @import "home";
+@import "playlists_index";
+@import "playlists_new";
+@import "playlists_show";
 @import "show";
 @import "songs_index";
 @import "score";

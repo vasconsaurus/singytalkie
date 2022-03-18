@@ -28,6 +28,12 @@
       </li>
       <% if user_signed_in? %>
         <li class="nav-li">
+          <%= link_to "Create a playlist", new_playlist_path, method: :get %>
+        </li>
+        <li class="nav-li">
+          <%= link_to "My playlists", playlists_path, method: :get %>
+        </li>
+        <li class="nav-li">
           <%= link_to "Edit Profile", edit_user_registration_path, method: :get %>
         </li>
         <li class="nav-li">
