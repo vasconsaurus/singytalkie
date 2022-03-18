@@ -1,6 +1,6 @@
 <section class="card-container"  data-search-songs-target="list">
     <% @songs.each do |song| %>
-      <div class="song-cards">
+      <div class="song-cards song-cards-space">
         <div class="song-cards-header">
 
           <iframe class="song-cards-video" src="<%= song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
@@ -10,15 +10,31 @@
             <h2 class="txt-blue-md"><%= song.title.upcase %></h2>
             <h4 class="txt-blue-md"><%= song.artist.upcase %></h4>
           </div>
-
         </div>
 
+        <!-- Button trigger modal -->
+        <button type="button" class="button orange-button button-a bck-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Learn this song!
+        </button>
 
-          <div class="song-cards-levels">
-            <%= link_to 'Beginner ★☆☆', song_path(song, level: "beginner"), class: "button button-submit  button-a" %>
-            <%= link_to 'Intermediate ★★☆', song_path(song, level: "intermediate"), class: "button button-submit button-a" %>
-            <%= link_to 'Advanced ★★★', song_path(song, level: "advanced"), class: "button button-submit  button-a" %>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pick a level!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="song-cards-levels">
+                  <%= link_to 'Beginner ★☆☆', song_path(song, level: "beginner"), class: "button-small button-a" %>
+                  <%= link_to 'Intermediate ★★☆', song_path(song, level: "intermediate"), class: "button-small button-a" %>
+                  <%= link_to 'Advanced ★★★', song_path(song, level: "advanced"), class: "button-small button-a" %>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
       </div>
   <% end %>

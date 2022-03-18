@@ -8,12 +8,14 @@
   line-height: 1.95rem;
   text-align: center;
   display: block;
+  background-color: transparent;
 
   a {
     text-decoration: none;
   }
 }
 
+// smaller button for levels
 .button-small {
   border-radius: 30px;
   padding: 0.25rem 0.5rem;
@@ -39,6 +41,11 @@
   }
 }
 
+//button white background
+.bck-white {
+  background-color: white;
+}
+
 // this button-a was made because our classes where not working with a in simple form buttons
 .button-a {
   text-decoration: none;
@@ -53,7 +60,29 @@ a.btn:hover a.button:hover{
 }
 
 // the nesting was working but seems to not work with a in simple form buttons
-.button-login {
+.orange-button {
+  border: 2px solid $orange-md;
+  color: $orange-md;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+
+  a {
+    color: $orange-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $orange-md;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: white;
+  }
+}
+
+
+.green-button{
   border: 2px solid $green-md;
   color: $green-md;
   padding: 0.75rem 1rem;
@@ -74,131 +103,19 @@ a.btn:hover a.button:hover{
   }
 }
 
-
-.button-recover-password {
-  border: 2px solid $orange-md;
-  color: $orange-md;
+.blue-button{
+  border: 2px solid $blue-md;
+  color: $blue-md;
   padding: 0.75rem 1rem;
   margin: 0.5rem 0;
 
   a {
-    color: $orange-md;
+    color: $blue-md;
     text-decoration: none;
   }
 
   &:hover {
-    background-color: $orange-md;
-    transition: 0.3s linear;
-  }
-
-  &:hover a {
-    color: white;
-  }
-}
-
-
-.button-signup {
-  border: 2px solid $orange-md;
-  color: $orange-md;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-
-  a {
-    color: $orange-md;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background-color: $orange-md;
-    transition: 0.3s linear;
-  }
-
-  &:hover a {
-    color: white;
-  }
-}
-
-
-.button-back{
-  border: 2px solid $green-md;
-  color: $green-md;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-
-  a {
-    color: $green-md;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background-color: $green-md;
-    transition: 0.3s linear;
-  }
-
-  &:hover a {
-    color: white;
-  }
-}
-
-
-.button-submit{
-  border: 2px solid $orange-md;
-  color: $orange-md;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-
-  a {
-    color: $orange-md;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background-color: $orange-md;
-    transition: 0.3s linear;
-  }
-
-  &:hover a {
-    color: white;
-  }
-}
-
-
-.button-delete-account{
-  border: 2px solid $orange-md;
-  color: white;
-  background-color: $orange-md;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background-color: transparent;
-    transition: 0.3s linear;
-  }
-
-  &:hover a {
-    color: $orange-md;
-  }
-}
-
-
-.button-save-updates {
-  border: 2px solid $orange-md;
-  color: $orange-md;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-
-  a {
-    color: $orange-md;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background-color: $orange-md;
+    background-color: $blue-md;
     transition: 0.3s linear;
   }
 

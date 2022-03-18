@@ -28,15 +28,15 @@
                     as: :file %>
       </div>
 
-        <%= f.button :submit, "Update", class: "button button-submit button-a" %>
+        <%= f.button :submit, "Update", class: "button orange-button button-a" %>
     <% end %>
 
     <div class="delete-area">
       <h5 class="detele-section-header">Unhappy?</h5>
-      <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button button-delete-account button-a" %>
+      <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button orange-button button-a" %>
     </div>
 
-    <%= link_to "Back", :back, class: "button button-back button-a" %>
+    <%= link_to "Back", :back, class: "button green-button button-a" %>
 
   </div>
 </div>

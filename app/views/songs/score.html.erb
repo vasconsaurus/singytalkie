@@ -60,10 +60,10 @@
 
   <div class="song-cards-levels">
     <h5><%= 'Play again?'.upcase %></h5>
-    <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button button-submit  button-a" %>
-    <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button button-submit button-a" %>
-    <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button button-submit  button-a" %>
+    <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button-small button-a" %>
+    <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button-small button-a" %>
+    <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button-small button-a" %>
   </div>
 
-  <%= link_to "Back", songs_path, class: "button button-submit button-a button-score" %>
+  <%= link_to "Back", :back, class: "button blue-button button-a wrap-button-center" %>
 </div>
