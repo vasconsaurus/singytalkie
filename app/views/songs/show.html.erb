@@ -1,18 +1,18 @@
 <div class="cards-wrap-song-show">
       <div class="video-container">
-        <div class="song-header">
-          <h2><%= @song.title.upcase %></h2>
-          <h4><%= @song.artist.upcase %></h4>
-          <p><%= @song.genre %></p>
-        </div>
         <iframe class="video-show" width="560" height="315" src="<%= @song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
   <section class="card-container-lyrics">
     <div class="song-cards-levels">
-      <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button button-submit  button-a" %>
-      <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button button-submit button-a" %>
-      <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button button-submit  button-a" %>
+      <div class="song-header">
+          <h2><%= @song.title.upcase %></h2>
+          <h4><%= @song.artist.upcase %></h4>
+          <p class="genre-txt"><%= @song.genre %></p>
+      </div>
+      <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button-a button-small" %>
+      <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button-a button-small" %>
+      <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button-small button-a" %>
     </div>
 
     <div class="song-cards">
