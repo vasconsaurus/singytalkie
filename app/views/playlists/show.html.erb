@@ -1,4 +1,4 @@
-<div>
+<div class="page-wrap">
   <div class="container">
     <h1><%= @playlist.title.capitalize %></h1>
     <ol><% @playlist.bookmarks.each do |bookmark|%>
@@ -17,5 +17,5 @@
 
   <%= link_to 'Back', playlists_path, class: "button button-back button-a" %>
   <%= link_to "Edit Playlist", edit_playlist_path(@playlist), method: 'GET', class: "button button-back button-a"%>
-  <%= link_to "Delete Playlist", playlist_path(@playlist), method: 'DELETE', data: { confirm: 'Are you sure?' }, class: "button button-back button-a" %>
+  <%= link_to "Delete Playlist", playlist_path(@playlist), method: 'DELETE', data: { confirm: 'Are you sure?' }, class: "button orange-solid-button button-a" %>
 </div>
