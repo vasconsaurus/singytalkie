@@ -1,7 +1,10 @@
-<div class="container">
-  <h3>New Playlist</h3>
-  <%= simple_form_for @playlist do |f| %>
-    <%= f.input :title %>
-    <%= f.submit class: 'btn btn-outline-secondary' %>
-  <% end %>
+<div class="background-new-playlist">
+
+  <div class="page-wrap">
+    <h3>New Playlist</h3>
+    <%= simple_form_for @playlist do |f| %>
+      <%= f.input :title %>
+      <%= f.submit class: 'button orange-button button-a wrap-button-center' %>
+    <% end %>
+  </div>
 </div>
