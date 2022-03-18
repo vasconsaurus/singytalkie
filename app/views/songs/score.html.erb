@@ -1,44 +1,69 @@
-<div class="page-wrap score-bg" data-controller="score">
+<div class="score-bg" data-controller="score">
 
   <div class="align-cards">
-    <div class = "card rating"> SCORE
-        <div class="card-body score">
+    <div class = "card rating">
+        <div class="card-body-score score">
           <span data-score-target="rating" data-value=<%= @final_rating %>>
           <%= @final_rating %>
-        </span>
+          </span>
             <div class="phrase">
               <div class="title">
                 <span class="block"></span>
-        <% case @final_rating
-        when 0 %>
-           <h3> Dont panic. We gotta start somewhere. </h3>
-        <% when 10..25 %>
-           <h3> "Listen to the song a few more times." </h3>
-        <%when 26..50 %>
-           <h3> "I know you can do better!" </h3>
-        <%when 51..75 %>
-           <h3> "Good job. You almost made it!"</h3>
-        <%else%>
-           <h3> "You are a song master."</h3>
-        <% end %>
+                <% case @final_rating
+                when 0..9 %>
+                  <h3> Don't panic... We're just getting started! </h3>
+                <% when 10..25 %>
+                  <h3> "You'll do better next time. Let's try again." </h3>
+                <% when 26..50 %>
+                  <h3> "Good job! You are getting better! Don't give up!" </h3>
+                <% when 51..75 %>
+                  <h3> "Awesome! You almost made it!"</h3>
+                <% else %>
+                  <h3> "CONGRATULATIONS! YOU ROCK!"</h3>
+                <% end %>
               </div>
             </div>
         </div>
     </div>
+  </div>
 
-    <div class = "card stats"> STATS
-      <div class="card-body time">
-        <p></p>
-        <p class="acertos"> CORRECT ANSWERS: X/X </p>
+  <div class="score-wrap">
+    <div class="song-cards songs-cards-translation">
+      <h5 class="song-card-title"> CORRECT ANSWERS: <%= "#{@rating}/#{Song::LEVELS[@level]}"  %> </h5>
+      <ol>
+        <% @words.each do |answer, input| %>
+        <% if answer == input %>
+          <li class="answers"><span class='right-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ACERTO%>
+          <% else %>
+          <li class="answers"><span class='right-answer'><%= answer %></span> • <span class='wrong-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ERRO%>
+          <% end %>
+        <%end %>
+      </ol>
+    </div>
+
+    <div class="song-cards songs-cards-translation">
+      <h5 class = "song-card-title"> LYRICS </h5>
+      <div>
+        <% lyrics = @song.lyrics %>
+        <%= line_breaker(lyrics) %>
+      </div>
+    </div>
+
+    <div class="song-cards songs-cards-translation">
+      <h5 class = "song-card-title"> TRANSLATION </h5>
+      <div>
+        <% translation = @song.translation %>
+        <%= line_breaker(translation) %>
       </div>
     </div>
   </div>
 
-    <div class = "card gabarito"> WORDS
-      <div class="gabarito-p">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ab nobis officiis eius, debitis error est non molestiae perspiciatis neque voluptatum minima at, adipisci rem iusto reiciendis vero odio quae?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sunt placeat obcaecati ad consequuntur facilis est porro tempore maxime voluptatum? Omnis veniam, suscipit quisquam laboriosam dolor dignissimos saepe deserunt voluptatum.</p>
-      </div>
-    </div>
+  <div class="song-cards-levels">
+    <h5><%= 'Play again?'.upcase %></h5>
+    <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button button-submit  button-a" %>
+    <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button button-submit button-a" %>
+    <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button button-submit  button-a" %>
+  </div>
 
+  <%= link_to "Back", songs_path, class: "button button-submit button-a button-score" %>
 </div>

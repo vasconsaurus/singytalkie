@@ -1,168 +1,100 @@
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background: white;
-// }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-
-.navbar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
+.my-navbar{
   width: 100%;
   height: 50px;
   background-color: $blue-light;
-  display: flex;
-  justify-content: space-between;
   z-index: 10;
-}
-
-.navbar-right {
   display: flex;
-  gap: 3rem;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .logo-nav {
   font-weight: 900;
   align-self: center;
   margin-bottom: 19px;
+  padding-right: 1rem;
 }
 
-/**
-┌─┐┌─┐┌─┐  ┬ ┬┌─┐┌┬┐┌┐ ┬ ┬┬─┐┌─┐┌─┐┬─┐  ┌┬┐┌─┐┌┐┌┬ ┬
-│  └─┐└─┐  ├─┤├─┤│││├┴┐│ │├┬┘│ ┬├┤ ├┬┘  │││├┤ ││││ │
-└─┘└─┘└─┘  ┴ ┴┴ ┴┴ ┴└─┘└─┘┴└─└─┘└─┘┴└─  ┴ ┴└─┘┘└┘└─┘
-**/
-/** always use classes and id's,[Type=checkbox] is slow css **/
+/////////////
 
-.checkbox-container {
-  display: block;
-  float: left;
-  width: 50px;
-  height: 50px;
+.nav-li{
+  margin:0 0 10px;
+}
+.wrapper{
+  overflow:hidden;
   position: relative;
-  background: $green-light;
+  z-index: 200;
 }
 
-.checkbox-trigger {
-  opacity: 0;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 0px;
-  cursor: pointer;
-  z-index: 5;
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:250px;
+  height:100%;
+  margin:0 0 0 -250px;
+  -moz-transition:all 200ms ease-in;
+  -webkit-transition:all 200ms ease-in;
+  -o-transition:all 200ms ease-in;
+  transition:all 200ms ease-in;
 }
-
-.hamburger-menu, .hamburger-menu::before, .hamburger-menu::after {
-    display: block;
-    position: absolute;
-    background: white;
-    width: 40px;
-    height: 4px;
-    margin: 1.3em 3em;
-    transition: background 0.3s;
-    padding-right: 20px;
+nav ul{
+  width:250px;
+  height:100%;
+  padding:0;
+  margin:0;
+  list-style:none;
+  background:$green-light;
+  overflow:hidden;
 }
-
-.hamburger-menu::before, .hamburger-menu::after {
-    content: '';
-    position: absolute;
-    margin: -0.7em 0 0;
-    transition: width 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+nav li{
+  margin:0;
 }
-
-.hamburger-menu::after {
-   margin-top: 0.7em;
+nav a{
+  color:$blue-md;
+  font-size:1em;
+  font-family:'helvetica neue', helvetica, arial, sans-serif;
+  text-decoration:none;
+  display:block;
+  padding:12px 15px;
+  font-weight:300;
+  letter-spacing:2px;
+  border-bottom:1px solid $blue-light;
 }
-
-.hamburger-menu {
-  position: relative;
-  display: block;
-  margin: 0;
-  margin-top: 1.45em;
-  margin-right: 0.35em;
-  margin-left: 0.35em;
-  margin-bottom: 1.45em;
-  transition: width 0.3s ease;
+nav a:hover{
+  background:$green-md;
 }
-
-.checkbox-trigger:checked {
-  // left: 202px;
+.nav-label{
+  display:block;
+  font-weight:700;
+  background:$green-light;
+  width:50px;
+  height:50px;
+  line-height:45px;
+  color:$orange-md;
+  text-align:center;
+  font-size:3em;
+  position:fixed;
+  top:0px;
+  left:0px;
+  -moz-transition:all 200ms ease-in;
+  -webkit-transition:all 200ms ease-in;
+  -o-transition:all 200ms ease-in;
+  transition:all 200ms ease-in;
+  z-index:500;
 }
-
-.checkbox-trigger:checked + .menu-content .hamburger-menu {
-  width: 2em;
-  transition: width 0.7s ease 0.7s;
+input[type="checkbox"]{
+  display:none;
 }
-
-.checkbox-trigger:checked + .menu-content .hamburger-menu::before {
-  width: 1.2em;
-  transform: rotate(-35deg);
-  margin-top: -0.4em;
+input[type="checkbox"]:checked ~ nav{
+  margin:0;
 }
-
-.checkbox-trigger:checked + .menu-content .hamburger-menu::after {
-  width: 1.2em;
-  transform: rotate(35deg);
-  margin-top: 0.4em;
+input[type="checkbox"]:checked ~ label{
+  left:260px;
 }
-
-.checkbox-trigger:checked + .menu-content ul {
-  width: 200px;
-  height: 100vh;
-  transition: width 0.7s ease 0.3s, height 0.3s ease;
+input[type="checkbox"]:checked ~ section{
+  -webkit-transform:translate3d(260px, 0, 0);
+  -moz-transform:translate3d(260px, 0, 0);
+  -o-transform:translate3d(260px, 0, 0);
+  transform:translate3d(260px, 0, 0);
 }
-
-.menu-content {
-  display: flex;
-  background: $green-light;
-  color: white;
-  float: left;
-}
-
-.menu-content ul {
-  display: block;
-  padding-left: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin: 0;
-  width: 0px;
-  height: 0px;
-  overflow: hidden;
-  transition: height 0.3s ease 0.7s, width 0.7s ease;
-}
-
-.menu-content ul li {
-  list-style: none;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  cursor: pointer;
-  transition: color 0.5s, background 0.5s;
-}
-
-.first-li {
-  margin-top: 3em;
-}
-
-// .menu-content ul li:hover {
-// }
-
-// .menu-style {
-//   z-index: 1;
-//   position: absolute;
-// }
-
-// .menu-content ul::before {
-//   width: 50px;
-// }
-
-// .menu-content ul::after {
-//   width: 200px;
-// }

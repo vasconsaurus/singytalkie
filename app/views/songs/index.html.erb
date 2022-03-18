@@ -19,6 +19,7 @@
                       value: params[:query],
                       data: { search_songs_target: 'input',
                               action: 'keyup->search-songs#update' } %>
+
     <% end %>
 
     <%= render "list", songs: @songs %>
