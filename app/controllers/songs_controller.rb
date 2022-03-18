@@ -21,7 +21,7 @@ class SongsController < ApplicationController
     @level = params[:level]
     @rating = 0
     @words = params.to_unsafe_h[:word]
-    @words.each { |key, value| @rating += 1 if key == value }
+    @words.each { |key, value| @rating += 1 if key == value.downcase }
     @final_rating = @rating * 100 / Song::LEVELS[@level]
   end
 
