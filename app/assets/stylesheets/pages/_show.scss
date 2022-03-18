@@ -1,8 +1,9 @@
 .video-show {
-  margin: 2rem 0;
+  margin: 0.5rem 0 2rem 2rem;
 }
 
 .video-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
