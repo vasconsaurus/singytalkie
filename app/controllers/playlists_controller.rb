@@ -1,13 +1,12 @@
 class PlaylistsController < ApplicationController
-  before_action :set_playlist, only: %i[show destroy]
+  before_action :set_playlist, only: %i[show edit destroy]
 
   def index
     @playlists = Playlist.all
   end
 
   def edit
-    @playlist.edit
-    redirect_to playlist_path(@playlist)
+    @songs = Song.where.not(id: @playlist.songs)
   end
 
   def update
@@ -17,6 +16,7 @@ class PlaylistsController < ApplicationController
       render :edit
     end
   end
+
   def show
     @bookmark = Bookmark.new
     @songs = Song.where.not(id: @playlist.songs).order(:title, :artist)
