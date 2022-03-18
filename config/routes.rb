@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   end
   resources :bookmarks, only: %i[edit update destroy]
 
-  get 'random', to: 'songs#random', as: :random
+  # get 'random/:id', to: 'songs#random', as: :random
   get ':slug', to: 'pages#show', as: 'pages'
 end

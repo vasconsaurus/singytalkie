@@ -18,13 +18,15 @@
 // cards-container for song show
 .card-container-lyrics {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 6rem;
 }
 
 .cards-wrap-song-show {
   padding: 5%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 // applies to both index and show
@@ -56,7 +58,7 @@
 }
 
 .song-cards-info {
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .song-cards-video {
@@ -88,6 +90,10 @@
   width: 7vw;
 }
 
+.wrap-button-center {
+  align-self: center;
+}
+
 
 // media queries
 
@@ -97,7 +103,7 @@
   }
 
   .card-container-lyrics {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
