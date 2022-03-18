@@ -2,9 +2,8 @@
   <h3><%= @playlist.title.capitalize %></h3>
 
   <div class="add-song">
-    <h5 class="text-center watch-text">Add a song to the playlist</h5>
     <%= simple_form_for [@playlist, @bookmark] do |f| %>
-      <%= f.association :song, label:false, collection: @songs, prompt: 'Choose a song', input_html: { class: 'form-select' } %>
+      <%= f.association :song, label:false, collection: @songs, prompt: 'Add a song', input_html: { class: 'form-select' } %>
       <%= f.button :submit, 'Add Song', class: "button-small orange-button button-a" %>
       <% end %>
   </div>
