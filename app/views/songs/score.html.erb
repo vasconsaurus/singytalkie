@@ -1,69 +1,62 @@
-<div class="page-wrap score-bg" data-controller="score">
+<div class="score-bg" data-controller="score">
 
   <div class="align-cards">
-    <div class = "card rating"> SCORE
-        <div class="card-body score">
+    <div class = "card rating">
+        <div class="card-body-score score">
           <span data-score-target="rating" data-value=<%= @final_rating %>>
           <%= @final_rating %>
-        </span>
+          </span>
             <div class="phrase">
               <div class="title">
                 <span class="block"></span>
-        <% case @final_rating
-        when 0..9 %>
-           <h3> Don't panic... We're just getting started! </h3>
-        <% when 10..25 %>
-           <h3> "You'll do better next time. Let's try again." </h3>
-        <% when 26..50 %>
-           <h3> "Good job! You are getting better! Don't give up!" </h3>
-        <% when 51..75 %>
-           <h3> "Awesome! You almost made it!"</h3>
-        <% else %>
-           <h3> "CONGRATULATIONS! YOU ROCK!"</h3>
-        <% end %>
+                <% case @final_rating
+                when 0..9 %>
+                  <h3> Don't panic... We're just getting started! </h3>
+                <% when 10..25 %>
+                  <h3> "You'll do better next time. Let's try again." </h3>
+                <% when 26..50 %>
+                  <h3> "Good job! You are getting better! Don't give up!" </h3>
+                <% when 51..75 %>
+                  <h3> "Awesome! You almost made it!"</h3>
+                <% else %>
+                  <h3> "CONGRATULATIONS! YOU ROCK!"</h3>
+                <% end %>
               </div>
             </div>
         </div>
     </div>
   </div>
-</div>
 
+  <div class="score-wrap">
+    <div class="song-cards songs-cards-translation">
+      <h5 class="song-card-title"> CORRECT ANSWERS: <%= "#{@rating}/#{Song::LEVELS[@level]}"  %> </h5>
+      <ol>
+        <% @words.each do |answer, input| %>
+        <% if answer == input %>
+          <li class="answers">Correct: <%= answer %> • Your Input: <%= input %></li> <%# INSERIR CLASSE DE ACERTO%>
+          <% else %>
+          <li class="answers">Correct: <%= answer %> • Your Input: <span class='wrong-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ERRO%>
+          <% end %>
+        <%end %>
+      </ol>
+    </div>
 
-<div class = "card gabarito">
-  WORDS
-  <% @words.each do |answer, input| %>
-  <% if answer == input %>
-     <p>Correct: <%= answer %> Your Input: <%= input %></p> <%# INSERIR CLASSE DE ACERTO%>
-     <% else %>
-     <p>Correct: <%= answer %> Your Input: <%= input %></p> <%# INSERIR CLASSE DE ERRO%>
-     <% end %>
-  <%end %>
-</div>
+    <div class="song-cards songs-cards-translation">
+      <h5 class = "song-card-title"> LYRICS </h5>
+      <div>
+        <% lyrics = @song.lyrics %>
+        <%= line_breaker(lyrics) %>
+      </div>
+    </div>
 
-  <div class="row">
-    <div class="column">
-      <div class="song-header">
-        <h2><%= @song.title.upcase %></h2>
-        <h4><%= @song.artist.upcase %></h4>
-        <p><%= @song.genre %></p>
-        <p class="acertos"> CORRECT ANSWERS: <%= "#{@rating}/#{Song::LEVELS[@level]}"  %> </p>
+    <div class="song-cards songs-cards-translation">
+      <h5 class = "song-card-title"> TRANSLATION </h5>
+      <div>
+        <% translation = @song.translation %>
+        <%= line_breaker(translation) %>
       </div>
     </div>
   </div>
 
-
-  <div class="row mb-5">
-    <div class="col-12 col-md-6">
-     <div class="card border-secondary mb-3">
-        <div class="card-header bg-transparent border-secondary pt-3">
-          <h5 class = card-title> LYRICS </h5>
-        </div>
-        <div class="card-body bg-transparent bg-opacity-50">
-          <%= @song.lyrics %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <%= link_to "Back", songs_path, class: "button button-back button-a" %>
-
-
+  <%= link_to "Back", songs_path, class: "button button-submit button-a" %>
+</div>

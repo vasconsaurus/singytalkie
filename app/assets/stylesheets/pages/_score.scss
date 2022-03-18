@@ -1,23 +1,17 @@
-// .page-wrap-score{
-//   height:150vh;
-//   background-color: $blue-md;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   padding: 50px;
-//   margin-top: 10px;
-// }
-
 .score-bg{
-  background-color: $blue-md;
-  height: 100vh;
+  background-color: $blue-light;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap:1rem;
+  align-items: center;
+  padding-bottom: 5%;
 }
 
 .align-cards{
-display: flex;
-gap: 50px;
-
+  display: flex;
+  gap: 50px;
+  width: 100vw;
 }
 
 .rating{
@@ -28,6 +22,10 @@ gap: 50px;
   background-color: $green-md;
   color: $gray-md;
   border-radius: 2px;
+}
+
+.card-body-score {
+  padding: 0 0 1rem 0;
 }
 
 .score{
@@ -115,7 +113,6 @@ gap: 50px;
 
 .gabarito{
   font-size: 3rem;
-  width: 60%;
   font-weight: bolder;
   align-items: center;
   background-color: $green-md;
@@ -129,7 +126,6 @@ gap: 50px;
     gap: 20px;
   }
 }
-
 
 @keyframes mainBlock {
   0% {
@@ -234,4 +230,32 @@ gap: 50px;
   .gabarito{
     width:100%;
   }
+}
+
+.score-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 3rem;
+  padding: 0.75rem 5% 0% 5%;
+}
+
+@media(max-width: 992px) {
+  .score-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .score-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.answers {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #000000;
+  padding-left: 0.5rem;
+  margin-left: -1rem;
 }
