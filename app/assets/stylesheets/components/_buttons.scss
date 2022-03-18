@@ -14,6 +14,7 @@
   }
 }
 
+// smaller button for levels
 .button-small {
   border-radius: 30px;
   padding: 0.25rem 0.5rem;
@@ -37,6 +38,11 @@
   &:hover a {
     color: white;
   }
+}
+
+//button white background
+.bck-white {
+  background-color: white;
 }
 
 // this button-a was made because our classes where not working with a in simple form buttons
