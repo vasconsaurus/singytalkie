@@ -17,6 +17,12 @@
           Learn this song!
         </button>
 
+        <% if can_delete %>
+          <button type="button" class="button orange-button button-a bck-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Delete
+          </button>
+        <% end %>
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">

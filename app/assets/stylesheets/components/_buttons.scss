@@ -60,15 +60,11 @@ a.btn:hover a.button:hover{
 }
 
 //button a for orange solid button
-.button-a {
+.button-a-solid {
   text-decoration: none;
 }
 
-.button-a:hover{
-  color: $orange-md;
-}
-
-a.btn:hover a.button:hover{
+.button-a-solid:hover{
   color: $orange-md;
 }
 
