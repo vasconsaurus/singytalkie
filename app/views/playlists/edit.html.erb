@@ -1,7 +1,10 @@
-<div class="container">
-  <h1 class="title-form">Editing Playlist</h1>
+<div class="background-new-playlist">
 
-  <%= render 'form', playlist: @playlist %>
+  <div class="page-wrap">
+    <h3 class="title-form">Editing Playlist</h3>
 
-  <%= link_to 'Back', playlists_path %>
+    <%= render 'form', playlist: @playlist %>
+
+    <%= link_to 'Back', playlists_path, class: "button green-button button-a" %>
+  </div>
 </div>

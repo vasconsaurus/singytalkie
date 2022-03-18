@@ -3,7 +3,10 @@
     <% @playlists.each do |playlist| %>
       <div class="playlist-list-container">
         <li class="playlist-list"><%= playlist.title %></li>
-        <%= link_to 'go to playlist', playlist_path(playlist), class: "button-small button-a" %>
+        <div>
+          <%= link_to "change playlist name", edit_playlist_path(playlist), method: 'GET', class: "button-small orange-button button-a"%>
+          <%= link_to "go to playlist", playlist_path(playlist), class: "button-small orange-button button-a" %>
+        </div>
       </div>
       <hr class="playlist-hr">
     <% end %>

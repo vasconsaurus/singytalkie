@@ -13,8 +13,7 @@
 
 
   <section class="buttons-container">
-    <%= link_to "Edit Playlist", edit_playlist_path(@playlist), method: 'GET', class: "button-small orange-button button-a"%>
-    <%= link_to "Delete Playlist", playlist_path(@playlist), method: 'DELETE', data: { confirm: 'Are you sure?' }, class: "button-small orange-solid-button button-a-solid" %>
+    <%= link_to "Delete Playlist", playlist_path(@playlist), method: 'DELETE', data: { confirm: 'Are you sure?' }, class: "button orange-solid-button button-a-solid" %>
     <%= link_to 'Back', playlists_path, class: "button green-button button-a" %>
   </section>
 </div>
