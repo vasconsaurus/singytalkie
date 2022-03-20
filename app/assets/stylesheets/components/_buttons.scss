@@ -90,28 +90,6 @@ a.btn:hover a.button:hover{
   }
 }
 
-
-.green-button{
-  border: 2px solid $green-md;
-  color: $green-md;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-
-  a {
-    color: $green-md;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background-color: $green-md;
-    transition: 0.3s linear;
-  }
-
-  &:hover a {
-    color: white;
-  }
-}
-
 .blue-button{
   border: 2px solid $blue-md;
   color: $blue-md;
@@ -147,6 +125,28 @@ a.btn:hover a.button:hover{
 
   &:hover {
     background-color: transparent;
+    transition: 0.3s linear;
+  }
+
+  &:hover a {
+    color: $orange-md;
+  }
+}
+
+.gray-button{
+  border: 2px solid gray;
+  color: white;
+  background-color: grey;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+
+  a {
+    color: $orange-md;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: gray;
     transition: 0.3s linear;
   }
 
