@@ -1,3 +1,11 @@
+.devise-wrap {
+  padding: 5% 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  position: relative;
+}
+
 .background-devise-views {
   background-color: $blue-md;
   height: 100%;
@@ -24,4 +32,8 @@
 
 .form-label {
   color: $blue-light !important;
+}
+
+.text-links {
+  margin-top: 4rem;
 }
