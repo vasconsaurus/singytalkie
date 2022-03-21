@@ -1,7 +1,8 @@
 puts "Cleaning up database..."
-Song.destroy_all
-User.destroy_all
+Bookmark.destroy_all
 Playlist.destroy_all
+User.destroy_all
+Song.destroy_all
 puts "Database cleaned!"
 
 lyrics01 = Song.create(song_link: "https://www.youtube.com/embed/sXYIxJScSik",
