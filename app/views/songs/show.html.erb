@@ -11,9 +11,9 @@
           <p class="genre-txt"><%= @song.genre %></p>
       </div>
       <div class="songs-cards-levels">
-        <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button-a button-small" %>
-        <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button-a button-small" %>
-        <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button-small button-a" %>
+        <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "green-button button-a button-small" %>
+        <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "orange-button button-a button-small" %>
+        <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "red-button button-small button-a" %>
       </div>
     </div>
 
