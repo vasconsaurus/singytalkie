@@ -8,6 +8,8 @@
   align-items: center;
 }
 
-.teste {
-  font-family: "mr-eaves-modern", "sans-serif" !important;
+@-moz-document url-prefix() {
+  .form-select {
+    font-family: "filson-soft", "Helvetica", "sans-serif";
+  }
 }
