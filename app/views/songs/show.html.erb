@@ -5,7 +5,7 @@
       <div class="video-container">
         <iframe class="video-show" src="<%= @song.song_link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
-      <div class="song-header">
+      <div class="song-header song-header-video">
           <h2><%= @song.title.upcase %></h2>
           <h4><%= @song.artist.upcase %></h4>
           <p class="genre-txt"><%= @song.genre %></p>
