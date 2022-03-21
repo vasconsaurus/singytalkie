@@ -35,12 +35,13 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  border: 1px solid black;
   background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .song-cards:hover{
-  border: 2px solid $blue-md;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.434);
 }
 
 .songs-cards-translation {
