@@ -1,5 +1,5 @@
 <div class="background-devise-views">
-  <div class="page-wrap">
+  <div class="devise-wrap">
     <h2>Sign up</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -27,12 +27,15 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Sign Up", class:"button orange-button button-a" %>
+        <%= f.button :submit, "Sign Up", class:"button orange-solid-button button-a" %>
       </div>
     <% end %>
 
-    <%- if controller_name != 'sessions' %>
-      <%= link_to "Login", new_user_session_path, class:"button orange-button button-a" %>
-    <% end %>
+
+    <div class="text-links">
+      <%- if controller_name != 'sessions' %>
+        <%= link_to "Or Login", new_user_session_path, class:"forgot-buttons forgot-buttons-a" %>
+      <% end %>
+    </div>
   </div>
 </div>

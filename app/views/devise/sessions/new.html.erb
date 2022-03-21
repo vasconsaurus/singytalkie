@@ -1,5 +1,5 @@
 <div class="background-devise-views-login">
-  <div class="page-wrap">
+  <div class="devise-wrap">
 
 
     <h2>Log in</h2>
@@ -11,22 +11,24 @@
                     autofocus: true,
                     input_html: { autocomplete: "email" } %>
         <%= f.input :password,
-                    required: false, class:"button",
+                    required: false, class: "button",
                     input_html: { autocomplete: "current-password" } %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%# <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
       <div class="form-actions">
-        <div><%= f.button :submit, "Log in", class: "button orange-button button-a" %></div>
+        <div><%= f.button :submit, "Log in", class: "button orange-solid-button button-a" %></div>
       </div>
     <% end %>
 
-    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-      <%= link_to "Sign up", new_registration_path(resource_name), class:"button orange-button button-a"%><br />
-    <% end %>
+    <div class="text-links">
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <%= link_to "Or Sign up", new_registration_path(resource_name), class:"forgot-buttons forgot-buttons-a"%><br />
+      <% end %>
 
-    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-      <%= link_to "Forgot your password?", new_password_path(resource_name), class:"button orange-button button-a" %><br />
-    <% end %>
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class:"forgot-buttons  forgot-buttons-a"  %><br />
+      <% end %>
+    </div>
   </div>
 </div>

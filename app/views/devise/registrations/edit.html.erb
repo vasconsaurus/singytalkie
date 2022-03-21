@@ -1,5 +1,5 @@
 <div class="background-devise-views">
-  <div class="page-wrap">
+  <div class="devise-wrap">
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -28,15 +28,15 @@
                     as: :file %>
       </div>
 
-        <%= f.button :submit, "Update", class: "button orange-button button-a" %>
+        <%= f.button :submit, "Update", class: "button orange-solid-button button-a" %>
     <% end %>
 
     <div class="delete-area">
       <h5 class="detele-section-header">Unhappy?</h5>
-      <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button orange-solid-button button-a" %>
+      <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button green-button button-a" %>
     </div>
 
-    <%= link_to "Back", :back, class: "button green-button button-a-solid" %>
+    <%= link_to "Back", :back, class: "button-small gray-button button-a" %>
 
   </div>
 </div>

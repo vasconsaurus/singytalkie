@@ -5,13 +5,13 @@
   flex-flow: column nowrap;
   gap:1rem;
   align-items: center;
-  padding-bottom: 5%;
+  padding-bottom: 1%;
 }
 
 .align-cards{
   display: flex;
   gap: 50px;
-  width: 100vw;
+  width: 100%;
 }
 
 .rating{
@@ -236,8 +236,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding: 0.75rem 5% 0% 5%;
+}
+
+.score-play-again {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #baf9b8;
+  padding: 4rem;
 }
 
 @media(max-width: 992px) {
@@ -266,6 +276,6 @@
 }
 
 .right-answer {
-  text-decoration:underline;
-  color:$blue-md;
+  color:$green-md;
+  font-weight: bold;
 }
