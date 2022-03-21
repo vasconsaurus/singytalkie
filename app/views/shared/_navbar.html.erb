@@ -1,5 +1,11 @@
 <section class="my-navbar">
-  <h1 class="logo-nav"> <%= link_to "SINGYTALKIE", root_path, method: :get %></h1>
+  <h1 class="logo-nav">
+    <% if user_signed_in? %>
+      <%= link_to "SINGYTALKIE", songs_path, method: :get %>
+    <% else %>
+      <%= link_to "SINGYTALKIE", root_path, method: :get %>
+    <% end  %>
+  </h1>
   <% if user_signed_in? %>
     <div class="avatar-square">
         <% if current_user and current_user.photo.attached? %>
