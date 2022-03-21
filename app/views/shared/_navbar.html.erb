@@ -27,7 +27,11 @@
   <nav>
     <ul>
       <li class="nav-li">
-        <%= link_to "Home", root_path, method: :get %></a>
+        <% if user_signed_in? %>
+      <%= link_to "Home", songs_path, method: :get %>
+    <% else %>
+      <%= link_to "Home", root_path, method: :get %>
+    <% end  %>
       </li>
       <li class="nav-li">
         <%= link_to "Pick a song", songs_path, method: :get %>
