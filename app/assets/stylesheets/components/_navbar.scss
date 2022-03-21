@@ -83,7 +83,7 @@ nav a:hover{
   transition:all 200ms ease-in;
   z-index:500;
 }
-input[type="checkbox"]{
+  input[type="checkbox"]{
   display:none;
 }
 input[type="checkbox"]:checked ~ nav{
@@ -97,4 +97,4 @@ input[type="checkbox"]:checked ~ section{
   -moz-transform:translate3d(260px, 0, 0);
   -o-transform:translate3d(260px, 0, 0);
   transform:translate3d(260px, 0, 0);
-}
+  }

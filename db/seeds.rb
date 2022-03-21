@@ -503,3 +503,72 @@ lyrics06 = Song.create(song_link: "https://www.youtube.com/embed/qztKD75J2BM",
                       Acho que tudo está em meu coração
                       Você será minha, minha única e somente
                       É assim que deveria começar?")
+
+
+ lyrics07 = Song.create(song_link: "https://www.youtube.com/watch?v=cJRP3LRcUFg",
+                        lyrics: "Punctured bicycle
+                        On a hillside desolate
+                        Will nature make a man of me yet?
+                        When in this charming car
+                        This charming man
+                        Why pamper life's complexity
+                        When the leather runs smooth
+                        On the passenger's seat?
+                        I would go out tonight
+                        But I haven't got a stitch to wear
+                        This man said, It's gruesome
+                        That someone so handsome should care
+                        Ah, a jumped-up pantry boy
+                        Who never knew his place
+                        He said, Return the ring
+                        He knows so much about these things
+                        He knows so much about these things
+                        I would go out tonight
+                        But I haven't got a stitch to wear
+                        This man said, It's gruesome
+                        That someone so handsome should care
+                        La, la-la, la-la, la-la, this charming man
+                        Oh, la-la, la-la, la-la, this charming man
+                        Ah, a jumped-up pantry boy
+                        Who never knew his place
+                        He said, Return the ring
+                        He knows so much about these things
+                        He knows so much about these things
+                        He knows so much about these things",
+                        title: "This Charming Man",
+                        artist: "The Smiths",
+                        genre: "Alternative",
+                        translation: "Bicicleta com pneu furado
+                        Num vale desolado
+                        Será que a natureza ainda vai fazer de mim um homem?
+                        Quando neste carro encantador
+                        Este homem encantador
+
+                        Por que mimar as complexidades da vida
+                        Quando o couro corre macio
+                        No banco do passageiro?
+
+                        Eu sairia esta noite
+                        Mas eu não tenho um trapo para vestir
+                        Este homem disse: É terrível
+                        Que alguém tão bonito deva se preocupar
+
+                        Um pobretão folgado
+                        Que nunca soube seu lugar
+                        Ele disse: Devolva as alianças
+                        Ele sabe tanto sobre estas coisas
+                        Ele sabe tanto sobre estas coisas
+
+                        Eu sairia esta noite
+                        Mas eu não tenho um trapo para vestir
+                        Este homem disse: É terrível
+                        Que alguém tão bonito deva se preocupar
+                        Oh, este homem encantador
+                        Oh, este homem encantador
+
+                        Um pobretão folgado
+                        Que nunca soube seu lugar
+                        Ele disse: Devolva a aliança
+                        Ele sabe tanto sobre estas coisas
+                        Ele sabe tanto sobre estas coisas
+                        Ele sabe tanto sobre estas coisas")
