@@ -68,13 +68,13 @@
   padding-bottom: 2rem;
 }
 
-.song-cards-levels {
+// songs show specific
+
+.song-cards-header-infos {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: flex-start;
 }
-
-// songs show specific
 
 .song-card-title {
   margin-bottom: 4rem;
@@ -97,6 +97,11 @@
   align-self: center;
 }
 
+.songs-cards-levels {
+  display: flex;
+  flex-flow: column nowrap ;
+  justify-content: flex-start;
+}
 
 // media queries
 
