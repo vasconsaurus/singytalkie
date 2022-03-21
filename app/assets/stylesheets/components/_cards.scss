@@ -36,8 +36,12 @@
   flex-flow: column nowrap;
   align-items: center;
   background-color: white;
+
+  position: relative;
+
   border-radius: 1rem;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
 .song-cards:hover{
@@ -76,6 +80,19 @@
   flex-flow: column nowrap;
   align-items: flex-start;
 }
+
+.fa-trash{
+  position:absolute;
+  right: 20px;
+  top: 17px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  size: 15px;
+}
+// songs show specific
+
+
 
 .song-card-title {
   margin-bottom: 4rem;
