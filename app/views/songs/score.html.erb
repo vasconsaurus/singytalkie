@@ -35,7 +35,7 @@
         <% if answer == input %>
           <li class="answers"><span class='right-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ACERTO%>
           <% else %>
-          <li class="answers"><span class='right-answer'><%= answer %></span> • <span class='wrong-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ERRO%>
+          <li class="answers"><span class='right-answer'><%= answer %></span> ≠ <span class='wrong-answer'><%= input %></span></li> <%# INSERIR CLASSE DE ERRO%>
           <% end %>
         <%end %>
       </ol>
@@ -58,12 +58,14 @@
     </div>
   </div>
 
-  <div class="song-cards-levels">
+  <div class="score-play-again">
     <h5><%= 'Play again?'.upcase %></h5>
-    <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "button-small button-a" %>
-    <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "button-small button-a" %>
-    <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "button-small button-a" %>
+    <div class="song-cards-levels">
+      <%= link_to 'Beginner ★☆☆', song_path(@song, level: "beginner"), class: "green-button button-small button-a" %>
+      <%= link_to 'Intermediate ★★☆', song_path(@song, level: "intermediate"), class: "orange-button button-small button-a" %>
+      <%= link_to 'Advanced ★★★', song_path(@song, level: "advanced"), class: "red-button button-small button-a" %>
+    </div>
   </div>
 
-  <%= link_to "Back", :back, class: "button gray-button button-a wrap-button-center" %>
+  <%= link_to "Back", :back, class: "button-small gray-button button-a wrap-button-center" %>
 </div>
