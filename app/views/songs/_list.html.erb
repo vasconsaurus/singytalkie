@@ -21,7 +21,7 @@
         <% can_delete = can_delete || nil %>
         <% if can_delete %>
           <%= link_to bookmark_path(@playlist.bookmarks.find_by(song_id: song.id)), method: 'DELETE', data: { confirm: 'Are you sure?' } do %>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash trash-song"></i>
         <% end %>
         <% end %>
         </div>
