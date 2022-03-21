@@ -35,13 +35,17 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  border: 1px solid black;
   background-color: white;
+
   position: relative;
+
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
 .song-cards:hover{
-  border: 2px solid $blue-md;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.434);
 }
 
 .songs-cards-translation {
@@ -69,10 +73,12 @@
   padding-bottom: 2rem;
 }
 
-.song-cards-levels {
+// songs show specific
+
+.song-cards-header-infos {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .fa-trash{
@@ -85,6 +91,8 @@
   size: 15px;
 }
 // songs show specific
+
+
 
 .song-card-title {
   margin-bottom: 4rem;
@@ -107,6 +115,11 @@
   align-self: center;
 }
 
+.songs-cards-levels {
+  display: flex;
+  flex-flow: column nowrap ;
+  justify-content: flex-start;
+}
 
 // media queries
 

@@ -1,8 +1,16 @@
 .video-show {
-  margin: 0 0 2rem 0.5rem;
+  margin-bottom: 2rem;
+  position: fixed;
+  left: 1.25rem;
 }
 
 .video-container {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+//song header specific for the songs show
+.song-header-video {
+  margin-top: 11.5rem;
 }
