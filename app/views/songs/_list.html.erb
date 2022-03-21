@@ -20,7 +20,9 @@
 
         <% can_delete = can_delete || nil %>
         <% if can_delete %>
-          <%= link_to "Delete Song", bookmark_path(@playlist.bookmarks.find_by(song_id: song.id)), method: 'DELETE', data: { confirm: 'Are you sure?' }, class: "button orange-solid-button button-a-solid" %>
+          <%= link_to bookmark_path(@playlist.bookmarks.find_by(song_id: song.id)), method: 'DELETE', data: { confirm: 'Are you sure?' } do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
         <% end %>
         </div>
 

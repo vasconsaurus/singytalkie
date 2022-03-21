@@ -37,6 +37,7 @@
   align-items: center;
   border: 1px solid black;
   background-color: white;
+  position: relative;
 }
 
 .song-cards:hover{
@@ -74,6 +75,15 @@
   align-items: center;
 }
 
+.fa-trash{
+  position:absolute;
+  right: 20px;
+  top: 17px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  size: 15px;
+}
 // songs show specific
 
 .song-card-title {

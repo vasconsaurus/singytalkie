@@ -156,7 +156,6 @@ a.btn:hover a.button:hover{
 }
 
 .white-button {
-
   color: $orange-md;
   padding: 0.75rem 1rem;
   margin: 0.5rem 0;
@@ -169,10 +168,18 @@ a.btn:hover a.button:hover{
 
   &:hover {
     background-color: $orange-md;
-    transition: 0.3s linear;
   }
 
   &:hover a {
     color: white;
   }
 }
+
+.fa-solid{
+    position: relative;
+
+    &:hover {
+      color: $orange-md;
+      transition: 0.3s linear;
+    }
+  }

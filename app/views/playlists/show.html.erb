@@ -8,11 +8,7 @@
       <% end %>
   </div>
 
-      <%= render "songs/list", songs: @playlist.songs, can_delete: true %>
-
-
   <section class="buttons-container">
-    <%= link_to "Delete Playlist", playlist_path(@playlist), method: 'DELETE', data: { confirm: 'Are you sure?' }, class: "button orange-solid-button button-a-solid" %>
     <%= link_to 'Back', playlists_path, class: "button gray-button button-a" %>
   </section>
 </div>
