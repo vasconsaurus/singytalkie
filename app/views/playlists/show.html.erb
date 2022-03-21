@@ -3,7 +3,7 @@
 
   <div class="add-song">
     <%= simple_form_for [@playlist, @bookmark] do |f| %>
-      <%= f.association :song, label:false, collection: @songs, prompt: 'Add a song', input_html: { class: 'form-select' } %>
+      <%= f.association :song, label:false, collection: @songs, prompt: 'Add a song', input_html: { class: 'form-select teste' } %>
       <%= f.button :submit, 'Add Song', class: "button-small orange-button button-a" %>
       <% end %>
   </div>
