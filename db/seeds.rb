@@ -1518,7 +1518,7 @@ fabio11 = Song.create(song_link: "https://www.youtube.com/embed/b-I2s5zRbHg",
                       genre: "R&B",
                       translation: "Te encontrei lá embaixo no bar e ouvi
                       Suas mangas arregaçadas e sua camiseta de caveira
-                      Você diz "O que você fez com ele hoje? "
+                      Você diz 'O que você fez com ele hoje?'
                       E me cheira como se eu fosse gim Tanqueray
 
                       Porque você é meu parceiro, meu cara
