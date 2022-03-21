@@ -36,9 +36,7 @@
   flex-flow: column nowrap;
   align-items: center;
   background-color: white;
-
   position: relative;
-
   border-radius: 1rem;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
@@ -81,7 +79,7 @@
   align-items: flex-start;
 }
 
-.fa-trash{
+.trash-song{
   position:absolute;
   right: 20px;
   top: 17px;
@@ -89,6 +87,16 @@
   border-radius: 50%;
   padding: 10px;
   size: 15px;
+}
+
+.fa-trash{
+  top: 5px;
+  size: 15px;
+  color: $orange-md;
+}
+
+.playlist-menu a{
+  text-decoration: none;
 }
 // songs show specific
 
