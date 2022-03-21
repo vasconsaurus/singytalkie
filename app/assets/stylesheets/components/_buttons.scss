@@ -200,17 +200,15 @@ a.btn:hover a.button:hover{
   }
 }
 
-
-.fa-solid{
-    position: relative;
-
-    &:hover {
-      color: $orange-md;
-      transition: 0.3s linear;
-    }
-  }
-
-.forgot-buttons{
+.forgot-buttons {
   color: rgba(255, 255, 255, 1.0);
 }
 
+.fa-solid {
+  position: relative;
+
+  &:hover {
+    color: $orange-md;
+    transition: 0.3s linear;
+  }
+}

@@ -1,3 +1,11 @@
+.devise-wrap {
+  padding: 5% 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  position: relative;
+}
+
 .background-devise-views {
   background-color: $blue-md;
   height: 100%;
@@ -10,10 +18,23 @@
 
 .delete-area {
   margin: 4rem 0;
-  border: 2px dotted $orange-md;
+  border: 2px dotted $green-md;
   padding: 2rem 2rem 4rem 2rem;
 }
 
 .detele-section-header {
   margin-bottom: 3rem;
+  color: $green-md;
+}
+
+.form-inputs .form-text {
+  color: white !important;
+}
+
+.form-label {
+  color: $blue-light !important;
+}
+
+.text-links {
+  margin-top: 4rem;
 }
