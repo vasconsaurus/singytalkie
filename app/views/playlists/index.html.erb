@@ -4,7 +4,10 @@
       <div class="playlist-list-container">
         <li class="playlist-list"><%= playlist.title %></li>
         <div class="playlist-menu">
-          <%= link_to "go to playlist", playlist_path(playlist), class: "button-small orange-button button-a" %>
+
+          <%= link_to playlist_path(playlist) do %>
+          <%= image_tag "lista.svg", alt:"Play icon", class:"playlist-play" %>
+          <% end %>
 
           <%= link_to edit_playlist_path(playlist), method: 'GET' do%>
           <i class="fa-solid fa-pen-clip fa-sm"></i>

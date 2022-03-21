@@ -505,7 +505,7 @@ lyrics06 = Song.create(song_link: "https://www.youtube.com/embed/qztKD75J2BM",
                       É assim que deveria começar?")
 
 
- lyrics07 = Song.create(song_link: "https://www.youtube.com/watch?v=cJRP3LRcUFg",
+ lyrics07 = Song.create(song_link: "https://www.youtube.com/embed/cJRP3LRcUFg",
                         lyrics: "Punctured bicycle
                         On a hillside desolate
                         Will nature make a man of me yet?
