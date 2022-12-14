@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: singytalkie_production
-  username: singytalkie
+  database: prod-db
+  username: prod-db
   password: <%= ENV['SINGYTALKIE_DATABASE_PASSWORD'] %>
