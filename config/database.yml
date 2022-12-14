@@ -81,6 +81,9 @@ test:
 #
 production:
   <<: *default
-  database: prod-db
-  username: prod-db
+  host: <%= ENV['SINGYTALKIE_DATABASE_HOST'] %>
+  port: <%= ENV['SINGYTALKIE_DATABASE_PORT'] %>
+  username: postgres
   password: <%= ENV['SINGYTALKIE_DATABASE_PASSWORD'] %>
+  database: postgres
+  sslmode: require
