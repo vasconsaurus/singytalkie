@@ -81,9 +81,4 @@ test:
 #
 production:
   <<: *default
-  host: <%= ENV['SINGYTALKIE_DATABASE_HOST'] %>
-  port: <%= ENV['SINGYTALKIE_DATABASE_PORT'] %>
-  username: prod
-  password: <%= ENV['SINGYTALKIE_DATABASE_PASSWORD'] %>
-  database: prod
-  sslmode: require
+  url: <%= ENV['DATABASE_URL'] %>

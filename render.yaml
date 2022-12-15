@@ -1,0 +1,19 @@
+databases:
+  - name: singytalkie
+    databaseName: singytalkie
+    user: singytalkie
+
+services:
+  - type: web
+    name: singytalkie
+    env: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: singytalkie
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
