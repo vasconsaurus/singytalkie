@@ -2,7 +2,6 @@ databases:
   - name: singytalkie
     databaseName: singytalkie
     user: singytalkie
-    plan: free
 
 services:
   - type: web
